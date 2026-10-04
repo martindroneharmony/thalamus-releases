@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Thalamus · the conductor for your Claude sessions</title>
-<meta name="description" content="Thalamus is a small Windows tray app that sees every Claude Code session you run, keeps your shells alive, tells you what to work on next, files your ideas, keeps a backlog and pings your phone only when you are away.">
+<meta name="description" content="Thalamus is a small Windows tray app that sees every Claude Code session you run, keeps your shells alive, tells you what to work on next, files your ideas, proposes new ones, keeps a backlog and pings your phone only when you are away.">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -255,6 +255,7 @@ footer .cta{justify-content:center}
     <div class="links">
       <a href="#cockpit">Cockpit</a>
       <a href="#next">Next up</a>
+      <a href="#daydream">Daydream</a>
       <a href="#backlog">Backlog</a>
       <a href="#telegram">Telegram</a>
       <a href="#private">Private</a>
@@ -317,7 +318,7 @@ footer .cta{justify-content:center}
     <div class="mock" role="img" aria-label="Illustration of the Thalamus cockpit with example data: three Next up columns for Work, Private and General with Start and Discard buttons; a board of sessions with states such as working, new answer waiting, answer seen, fresh, needs approval, a session running two background commands and a session started outside; a collapsed Recent section; and two side-by-side terminal groups with their own tabs.">
       <div class="bar">
         <img src="icon.png" alt=""><b>Thalamus</b>
-        <div class="tabs"><span class="on">Cockpit<span class="cnt">2</span></span><span>Inbox</span><span>Backlog</span><span>Usage</span></div>
+        <div class="tabs"><span class="on">Cockpit<span class="cnt">2</span></span><span>Inbox</span><span>Ideas</span><span>Backlog</span><span>Usage</span></div>
         <div class="usage"><span><span class="batt"><i class="mid" style="height:8px"></i></span><b>58%</b></span><span><span class="batt"><i style="height:11px"></i></span><b>81%</b></span></div>
         <span class="gear">⚙</span>
       </div>
@@ -396,7 +397,7 @@ footer .cta{justify-content:center}
         <h3>Inbox: drop it and forget it</h3>
         <p class="muted">Paste or drop anything into Thalamus: text, a screenshot, a file, with a comment if you like. Claude files clear items straight into the right Engram project. Unclear ones wait with a suggestion, and <b>Wrong project</b> corrects a filing and teaches it for next time.</p>
         <div class="mock" role="img" aria-label="Illustration of the Inbox with example data: one screenshot filed automatically to the website project with a Wrong project button, and one note waiting with the suggestion home-lab and buttons to file or discard it." style="margin-top:20px">
-          <div class="bar"><img src="icon.png" alt=""><div class="tabs"><span>Cockpit</span><span class="on">Inbox</span><span>Backlog</span><span>Usage</span></div></div>
+          <div class="bar"><img src="icon.png" alt=""><div class="tabs"><span>Cockpit</span><span class="on">Inbox</span><span>Ideas</span><span>Backlog</span><span>Usage</span></div></div>
           <div class="irow"><div class="ih"><span class="it">09:12</span><span>Footer overlaps the cookie banner on mobile</span></div>
             <span class="att"><i></i>screenshot.png</span>
             <div class="ia">Filed to <b style="color:var(--text)">website</b> · 94% sure<span style="flex:1"></span><span class="mbtn">Wrong project</span></div></div>
@@ -404,6 +405,31 @@ footer .cta{justify-content:center}
             <div class="ia">Suggested: <b style="color:var(--text)">home-lab</b><span style="flex:1"></span><span class="mbtn pri">File</span><span class="mbtn">Other project…</span><span class="mbtn gh">Discard</span></div></div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="daydream">
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow">Daydream</p>
+      <h2>Ideas you had not had yet.</h2>
+      <p class="muted">Named after the brain's default mode network, which comes up with ideas while you are busy with something else. Every few hours Claude looks at what is going on across your projects: the sessions, the inbox, the backlog and what your memory noted recently. Then it proposes a few new ideas: a next feature, a link between two projects, a risk worth heading off.</p>
+      <ul class="list">
+        <li><span><b>Greenlight or Discard.</b> Greenlight puts an idea on a project's backlog, or opens a new project for it. Discard teaches Daydream not to propose it again.</span></li>
+        <li><span><b>Never in your way.</b> Ideas wait in their own list, not in the inbox. A run is skipped when nothing changed, or when you were away the whole time.</span></li>
+        <li><span><b>Your rhythm.</b> Every 2 hours to start, from 30 minutes to once a day, with the model you choose. <code>/ideas</code> and <code>/daydream</code> work from your phone too.</span></li>
+      </ul>
+    </div>
+    <div class="mock" role="img" aria-label="Illustration of the Ideas view with example data: Daydream runs every 2 hours with Opus, last run 40 minutes ago; three ideas for the projects website, home-lab and a new garden project, each with its reason and Greenlight and Discard buttons.">
+      <div class="bar"><img src="icon.png" alt=""><div class="tabs"><span>Cockpit</span><span>Inbox</span><span class="on">Ideas<span class="cnt" style="background:var(--dim)">3</span></span><span>Backlog</span><span>Usage</span></div></div>
+      <div class="mhead" style="padding:10px 12px 0"><span class="mlbl">Daydream</span><span class="muted" style="font-size:11px">every 2 h with Opus · last run 40 min ago</span><span class="sp"></span><span class="mbtn">Daydream now</span><span class="mbtn gh">Pause</span></div>
+      <div class="irow"><div class="ih"><span class="it"><i class="dot c-work"></i> website</span><span>Reuse the new image pipeline for the product pages</span></div>
+        <div class="ia">why: the blog got 40% faster with it last week<span style="flex:1"></span><span class="mbtn pri">Greenlight</span><span class="mbtn gh">Discard</span></div></div>
+      <div class="irow"><div class="ih"><span class="it"><i class="dot c-general"></i> home-lab</span><span>Alert when the nightly backup has not run for two days</span></div>
+        <div class="ia">why: two notes this week found the backup stopped silently<span style="flex:1"></span><span class="mbtn pri">Greenlight</span><span class="mbtn gh">Discard</span></div></div>
+      <div class="irow"><div class="ih"><span class="it"><i class="dot c-private"></i> new project: Garden</span><span>A watering log fed by the weather forecast</span></div>
+        <div class="ia">why: watering came up in three inbox notes<span style="flex:1"></span><span class="mbtn pri">Greenlight</span><span class="mbtn gh">Discard</span></div></div>
     </div>
   </div>
 </section>
@@ -466,7 +492,7 @@ footer .cta{justify-content:center}
         <li><span><b>You choose how loud.</b> Off, Approvals only, Important or Everything. A cap on messages per hour, and quiet hours that end with a single summary.</span></li>
         <li><span><b>Approvals at once, answers batched.</b> Approval requests arrive straight away. Waiting answers collect in one silent message that updates in place.</span></li>
         <li><span><b>Reply to answer.</b> Reply to a ping and your text goes to that session as its next instruction.</span></li>
-        <li><span><b>Capture on the go.</b> Send an idea, a photo or a file and it lands in the inbox. <code>/next</code> shows what is up, with Go and Skip.</span></li>
+        <li><span><b>Capture on the go.</b> Send an idea, a photo or a file and it lands in the inbox. <code>/next</code> shows what is up, with Go and Skip; <code>/ideas</code> brings Daydream's proposals.</span></li>
         <li><span><b>Approvals with a code.</b> Shell commands and Claude permission prompts are approved with a code from your authenticator app, set up once by scanning a QR code.</span></li>
       </ul>
     </div>
@@ -504,7 +530,7 @@ footer .cta{justify-content:center}
       <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div><h3>Pick and switch the model</h3><p>Choose the model when you start a session, with a guide to its speed and how much of your limits it uses. Switch it later with a click on the board.</p></div>
       <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M10 16h4M10 12h4M10 8h4"/></svg></div><h3>Limits and token use</h3><p>Your 5-hour and weekly limits as two batteries in the title bar. Token history per day, week or month by project and model, and a token panel for each session.</p></div>
       <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3>Commands wait for you</h3><p>Commands proposed for a PowerShell run only after you approve them. Tasks for a project go to its session, or open one, and never to two sessions at once.</p></div>
-      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg></div><h3>Settings your way</h3><p>Dark, light or system theme, size per screen, terminal font, side-by-side terminals and your own shortcuts: <kbd>Ctrl+N</kbd> Claude session, <kbd>Ctrl+P</kbd> PowerShell, <kbd>Ctrl+1</kbd>–<kbd>4</kbd> views, <kbd>Ctrl+,</kbd> settings.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg></div><h3>Settings your way</h3><p>Dark, light or system theme, size per screen, terminal font, side-by-side terminals and your own shortcuts: <kbd>Ctrl+N</kbd> Claude session, <kbd>Ctrl+P</kbd> PowerShell, <kbd>Ctrl+1</kbd>–<kbd>5</kbd> views, <kbd>Ctrl+,</kbd> settings.</p></div>
     </div>
   </div>
 </section>
@@ -517,7 +543,7 @@ footer .cta{justify-content:center}
     <div class="flow">
       <div class="box"><h3>Claude Code sessions</h3><p>In any terminal. Hooks report start, prompts, tool use, waiting and end. The status line reports limits and model.</p></div>
       <div class="arrow">→ 127.0.0.1 →</div>
-      <div class="box hub"><h3>Thalamus</h3><p>Tray app with the board, Next up, inbox, backlog, usage, the terminals and the optional Telegram bot. Installs signed updates by itself.</p></div>
+      <div class="box hub"><h3>Thalamus</h3><p>Tray app with the board, Next up, inbox, Daydream ideas, backlog, usage, the terminals and the optional Telegram bot. Installs signed updates by itself.</p></div>
       <div class="arrow">⇄ pipe ⇄</div>
       <div class="box"><h3>Shell host</h3><p>A background process that owns your terminals, so they outlive the window and every update.</p></div>
     </div>
