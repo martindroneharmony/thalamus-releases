@@ -438,9 +438,9 @@ footer .cta{justify-content:center}
   <div class="wrap">
     <p class="eyebrow">Backlog</p>
     <h2>A board for each part of your life.</h2>
-    <p class="lead">A Kanban board per category, with Open, Next, Doing and Done, built from Engram: items you marked as backlog plus each project's known gaps. Cards are grouped by project, with search and a project filter.</p>
+    <p class="lead">A Kanban board per category, with Open, Next, Doing and Done, built from Engram: items you marked as backlog plus each project's known gaps. Cards are grouped by project, with search and a project filter. Done is written back to Engram, and Reopen opens a card again everywhere, on every laptop.</p>
     <div class="mock" role="img" aria-label="Illustration of the Backlog with example data: the Work category with four lanes, Open, Next, Doing and Done; cards grouped by project, each with a clear title, why and done when; one card flagged Looks done; buttons Suggest from Engram and Clarify.">
-      <div class="bar"><img src="icon.png" alt=""><b>Thalamus</b><div class="tabs"><span>Cockpit</span><span>Inbox</span><span class="on">Backlog</span><span>Usage</span></div></div>
+      <div class="bar"><img src="icon.png" alt=""><b>Thalamus</b><div class="tabs"><span>Cockpit</span><span>Inbox</span><span>Ideas</span><span class="on">Backlog</span><span>Usage</span></div></div>
       <div class="bltool">
         <span class="seg"><span class="on">Work</span><span>Private</span><span>General</span><span>All</span></span>
         <span class="fin">All projects ▾</span><span class="fin">Search cards</span>
@@ -493,7 +493,8 @@ footer .cta{justify-content:center}
         <li><span><b>Approvals at once, answers batched.</b> Approval requests arrive straight away. Waiting answers collect in one silent message that updates in place.</span></li>
         <li><span><b>Reply to answer.</b> Reply to a ping and your text goes to that session as its next instruction.</span></li>
         <li><span><b>Capture on the go.</b> Send an idea, a photo or a file and it lands in the inbox. <code>/next</code> shows what is up, with Go and Skip; <code>/ideas</code> brings Daydream's proposals.</span></li>
-        <li><span><b>Approvals with a code.</b> Shell commands and Claude permission prompts are approved with a code from your authenticator app, set up once by scanning a QR code.</span></li>
+        <li><span><b>Look in and act.</b> <code>/board</code> shows everything that runs, <code>/tail</code> the last lines of a tab, <code>/inbox</code> what waits to be filed. <code>/send</code> gives a project's session an instruction; <code>/sh</code> queues a PowerShell command that waits for your approval.</span></li>
+        <li><span><b>Approvals with a code.</b> Shell commands and Claude permission prompts are approved with a code from your authenticator app, set up once by scanning a QR code. A code approves exactly the prompt you saw, never a newer one.</span></li>
       </ul>
     </div>
     <div class="phone" role="img" aria-label="Illustration of a Telegram chat with the Thalamus bot, with example data: a silent message Waiting for you (2) listing two sessions with Reply buttons; an approval request for a command in the home-lab project with Approve and Deny buttons; and the answer to /next with Go and Skip buttons.">
@@ -560,7 +561,8 @@ footer .cta{justify-content:center}
     <ul class="list">
       <li><span><b>Local only.</b> The server listens on 127.0.0.1, needs a per-install token and refuses anything a web page could send.</span></li>
       <li><span><b>Your own Claude login.</b> Ranking, filing and clarifying run as Claude calls on your own plan. No other AI service is involved.</span></li>
-      <li><span><b>Secrets stay put.</b> Tokens live in one local file, never in logs or messages. Text sent to Telegram is redacted first.</span></li>
+      <li><span><b>Secrets stay put.</b> Tokens live in one local file, never in logs or messages; your Telegram token and approval secret are encrypted with Windows' own data protection. Text sent to Telegram is redacted first.</span></li>
+      <li><span><b>Nothing runs by itself.</b> Shell commands always wait for your approval, and text sent to a Claude session can never turn into one. Everything Thalamus does is kept in an audit log you can read in Settings.</span></li>
       <li><span><b>Report-only hooks.</b> The token Claude's hooks use can report events, nothing else. It cannot start, read or control a shell.</span></li>
       <li><span><b>Your settings, your call.</b> Hooks are added to your Claude settings only after you see the exact change and confirm it. A backup is made first.</span></li>
     </ul>
