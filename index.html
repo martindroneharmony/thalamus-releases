@@ -96,7 +96,7 @@ p.lead{font-size:19px;color:var(--dim);max-width:680px;margin:0 0 28px}
 .cat{display:flex;align-items:center;gap:8px;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin:8px 0 2px}
 .dot{width:8px;height:8px;border-radius:50%;display:inline-block;flex:none}
 .c-work{background:var(--work)}.c-private{background:var(--private)}.c-general{background:var(--general)}
-.row{display:grid;grid-template-columns:120px 16px minmax(0,1fr) auto;gap:10px;align-items:center;padding:4px 6px;border-radius:6px}
+.row{display:grid;grid-template-columns:16px 120px minmax(0,1fr) auto;gap:10px;align-items:center;padding:4px 6px;border-radius:6px}
 .row.sel{background:var(--hover)}
 .row .nm{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .row .d{color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -340,13 +340,13 @@ footer .cta{justify-content:center}
       <div class="mhead"><span class="mlbl">Claude sessions</span><span class="sp"></span><span class="mbtn">+ Task</span><span class="mbtn pri">+ Claude session</span><span class="mbtn">+ PowerShell</span></div>
       <div class="rows">
         <div class="cat"><span class="dot c-work"></span>Work</div>
-        <div class="row sel"><span class="nm">billing-api</span><span class="st"><span class="eq"><i></i><i></i><i></i></span></span><span class="d">working · src/invoices/retry.ts</span><span class="x"><span class="chip">⟳ 2 in background</span><span class="tag">Opus</span></span></div>
-        <div class="row"><span class="nm">website</span><span class="st"><span class="bang">!</span></span><span class="d">Should the hero image be lazy-loaded?</span><span class="x"><span class="tag">Sonnet</span></span></div>
+        <div class="row sel"><span class="st"><span class="eq"><i></i><i></i><i></i></span></span><span class="nm">billing-api</span><span class="d">working · src/invoices/retry.ts</span><span class="x"><span class="chip">⟳ 2 in background</span><span class="tag">Opus</span></span></div>
+        <div class="row"><span class="st"><span class="bang">!</span></span><span class="nm">website</span><span class="d">Should the hero image be lazy-loaded?</span><span class="x"><span class="tag">Sonnet</span></span></div>
         <div class="cat"><span class="dot c-private"></span>Private</div>
-        <div class="row"><span class="nm">garden-planner</span><span class="st"><span class="bang seen">!</span></span><span class="d">Tests pass. Shall I merge the watering schedule?</span><span class="x"><span class="tag">Sonnet</span></span></div>
-        <div class="row"><span class="nm">home-lab</span><span class="st"><span class="z">z</span><span class="z">Z</span><span class="z">z</span></span><span class="d">fresh session</span><span class="x"><span class="otag">outside</span><span class="tag">Haiku</span></span></div>
+        <div class="row"><span class="st"><span class="bang seen">!</span></span><span class="nm">garden-planner</span><span class="d">Tests pass. Shall I merge the watering schedule?</span><span class="x"><span class="tag">Sonnet</span></span></div>
+        <div class="row"><span class="st"><span class="z">z</span><span class="z">Z</span><span class="z">z</span></span><span class="nm">home-lab</span><span class="d">fresh session</span><span class="x"><span class="otag">outside</span><span class="tag">Haiku</span></span></div>
         <div class="cat"><span class="dot c-general"></span>General</div>
-        <div class="row"><span class="nm">thesis</span><span class="st"><span class="q">?</span></span><span class="d">needs your approval: run latexmk -pdf?</span><span class="x"><span class="tag">Opus</span></span></div>
+        <div class="row"><span class="st"><span class="q">?</span></span><span class="nm">thesis</span><span class="d">needs your approval: run latexmk -pdf?</span><span class="x"><span class="tag">Opus</span></span></div>
         <div class="recent">▸ Recent (3) · ended sessions, ready to resume</div>
       </div>
       <div class="groups">
@@ -492,7 +492,7 @@ footer .cta{justify-content:center}
         <li><span><b>You choose how loud.</b> Off, Approvals only, Important or Everything. A cap on messages per hour, and quiet hours that end with a single summary.</span></li>
         <li><span><b>Approvals at once, answers batched.</b> Approval requests arrive straight away. Waiting answers collect in one silent message that updates in place.</span></li>
         <li><span><b>Reply to answer.</b> Reply to a ping and your text goes to that session as its next instruction.</span></li>
-        <li><span><b>Capture on the go.</b> Send an idea, a photo or a file and it lands in the inbox. <code>/next</code> shows what is up, with Go and Skip; <code>/ideas</code> brings Daydream's proposals.</span></li>
+        <li><span><b>Capture on the go.</b> Send an idea, a photo or a file: Thalamus sorts it and replies where it went, with a Wrong project button, or that it waits in the inbox. <code>/next</code> shows what is up, with Go and Skip; <code>/ideas</code> brings Daydream's proposals.</span></li>
         <li><span><b>Look in and act.</b> <code>/board</code> shows everything that runs, <code>/tail</code> the last lines of a tab, <code>/inbox</code> what waits to be filed. <code>/send</code> gives a project's session an instruction; <code>/sh</code> queues a PowerShell command that waits for your approval.</span></li>
         <li><span><b>Approvals with a code.</b> Shell commands and Claude permission prompts are approved with a code from your authenticator app, set up once by scanning a QR code. A code approves exactly the prompt you saw, never a newer one.</span></li>
       </ul>
@@ -597,7 +597,7 @@ Import-Certificate $c -CertStoreLocation Cert:\CurrentUser\TrustedPublisher | Ou
       <li><div><h3>Run it</h3><p>It installs for your user only, no admin rights needed. The publisher shows as <b>Thalamus Code Signing</b>. As a new program it may still meet "Windows protected your PC": choose <b>More info</b>, then <b>Run anyway</b>.</p></div></li>
       <li><div><h3>Find it in the tray</h3><p>Thalamus starts with Windows and lives in the tray. Click the icon to open the cockpit; the gear (<kbd>Ctrl+,</kbd>) opens the settings.</p></div></li>
       <li><div><h3>Let your sessions report</h3><p>Click <b>Set up the hooks…</b>. Thalamus shows exactly what it adds to your Claude settings and makes a backup first.</p></div></li>
-      <li><div><h3>Start Claude anywhere</h3><p>Run <code>claude</code> in any terminal, or press <kbd>Ctrl+N</kbd> in Thalamus. The session appears on the board.</p></div></li>
+      <li><div><h3>Start Claude anywhere</h3><p>Run <code>claude</code> in any terminal, or press <kbd>Ctrl+N</kbd> in Thalamus and pick a project. The session appears on the board.</p></div></li>
       <li><div><h3>Optional: your phone</h3><p>In Settings, under Telegram, pair your own bot and scan the QR code with your authenticator app. Pick how much you want to hear.</p></div></li>
       <li><div><h3>Optional: limits in the top bar</h3><p>If you use a Claude status line script in PowerShell, add this so it also passes the limits to Thalamus (<code>$raw</code> is the JSON your script read from standard input):</p>
 <pre class="code">try { $t = Get-Content "$env:LOCALAPPDATA\Thalamus\report.json" -Raw -ErrorAction Stop | ConvertFrom-Json
