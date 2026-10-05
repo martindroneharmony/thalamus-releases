@@ -323,10 +323,10 @@ footer .cta{justify-content:center}
     <p class="eyebrow">The cockpit</p>
     <h2>Everything that runs, on one screen.</h2>
     <p class="lead">The board of every session at the top, your terminals below as tabs, and Next up one tab over. On a wide screen the terminals split into two groups side by side, each with its own tab strip.</p>
-    <div class="mock" role="img" aria-label="Illustration of the Thalamus cockpit with example data: a Next up tab with three new suggestions; a board of sessions, each with a small pie showing how full its context window is, with states such as working, new answer waiting, answer seen, fresh, needs approval, a session running two background commands and a session started outside; a collapsed Recent section; and two side-by-side terminal groups with their own tabs.">
+    <div class="mock" role="img" aria-label="Illustration of the Thalamus cockpit with example data: a Today tab with three new suggestions; a board of sessions, each with a small pie showing how full its context window is, with states such as working, new answer waiting, answer seen, fresh, needs approval, a session running two background commands and a session started outside; a collapsed Recent section; and two side-by-side terminal groups with their own tabs.">
       <div class="bar">
         <img src="icon.png" alt=""><b>Thalamus</b>
-        <div class="tabs"><span class="on">Cockpit<span class="cnt">2</span></span><span>Next up<span class="cnt n">3</span></span><span>Inbox</span><span>Ideas</span><span>Backlog</span><span>Usage</span></div>
+        <div class="tabs"><span>Today<span class="cnt n">3</span></span><span class="on">Cockpit<span class="cnt">2</span></span><span>Board</span><span>Inbox</span><span>AI Daydream</span><span>Usage</span></div>
         <div class="usage"><span><span class="batt"><i class="mid" style="height:8px"></i></span><b>58%</b></span><span><span class="batt"><i style="height:11px"></i></span><b>81%</b></span></div>
         <span class="gear">⚙</span>
       </div>
@@ -376,8 +376,8 @@ footer .cta{justify-content:center}
     <p class="eyebrow">Next up and Inbox</p>
     <h2>From a board to a conductor.</h2>
     <p class="lead">Thalamus does not just show what runs. It suggests what to do next and puts every stray idea where it belongs.</p>
-    <div class="mock" role="img" aria-label="Illustration of the Next up tab with example data: three columns for Work, Private and General, each with ranked suggestions and Start and Discard buttons." style="margin:22px 0 26px">
-      <div class="bar"><img src="icon.png" alt=""><div class="tabs"><span>Cockpit</span><span class="on">Next up</span><span>Inbox</span><span>Ideas</span><span>Backlog</span><span>Usage</span></div></div>
+    <div class="mock" role="img" aria-label="Illustration of the Today tab with example data: three columns for Work, Private and General, each with ranked suggestions and Start and Discard buttons." style="margin:22px 0 26px">
+      <div class="bar"><img src="icon.png" alt=""><div class="tabs"><span class="on">Today</span><span>Cockpit</span><span>Board</span><span>Inbox</span><span>AI Daydream</span><span>Usage</span></div></div>
       <div class="mhead"><span class="mlbl">Next up</span><span class="muted" style="font-size:11px">ranked 12 min ago</span><span class="sp"></span><span class="mbtn gh">Refresh</span></div>
       <div class="ncols">
         <div class="ncol"><div class="nt mlbl"><span class="dot c-work"></span>Work</div>
@@ -397,7 +397,7 @@ footer .cta{justify-content:center}
     <div class="two top">
       <div>
         <h3>Next up: three short lists</h3>
-        <p class="muted">Every 30 minutes Claude looks at the sessions waiting for you, the inbox and the backlog, and ranks what to do next in three columns: Work, Private and General. They have their own tab right of the Cockpit (<kbd>Ctrl+6</kbd>), which counts what is new since you last looked.</p>
+        <p class="muted">Every 30 minutes Claude looks at the sessions waiting for you, the inbox and the backlog, and ranks what to do next in three columns: Work, Private and General. They have their first tab, Today (<kbd>Ctrl+1</kbd>), under the three things for today, and the tab counts what is new since you last looked.</p>
         <ul class="list">
           <li><span><b>Start or Discard.</b> Start hands the item to its project's session, or opens one.</span></li>
           <li><span><b>It learns.</b> What you start and what you skip shapes the next ranking.</span></li>
@@ -410,7 +410,7 @@ footer .cta{justify-content:center}
         <h3>Inbox: drop it and forget it</h3>
         <p class="muted">Paste or drop anything into Thalamus: text, a screenshot, a file, with a comment if you like. Claude files clear items straight into the right Engram project. Unclear ones wait with a suggestion, and <b>Wrong project</b> corrects a filing and teaches it for next time.</p>
         <div class="mock" role="img" aria-label="Illustration of the Inbox with example data: one screenshot filed automatically to the website project with a Wrong project button, and one note waiting with the suggestion home-lab and buttons to file or discard it." style="margin-top:20px">
-          <div class="bar"><img src="icon.png" alt=""><div class="tabs"><span>Cockpit</span><span>Next up</span><span class="on">Inbox</span><span>Ideas</span><span>Backlog</span><span>Usage</span></div></div>
+          <div class="bar"><img src="icon.png" alt=""><div class="tabs"><span>Today</span><span>Cockpit</span><span>Board</span><span class="on">Inbox</span><span>AI Daydream</span><span>Usage</span></div></div>
           <div class="irow"><div class="ih"><span class="it">09:12</span><span>Footer overlaps the cookie banner on mobile</span></div>
             <span class="att"><i></i>screenshot.png</span>
             <div class="ia">Filed to <b style="color:var(--text)">website</b> · 94% sure<span style="flex:1"></span><span class="mbtn">Wrong project</span></div></div>
@@ -434,8 +434,8 @@ footer .cta{justify-content:center}
         <li><span><b>Your rhythm.</b> Every 2 hours to start, from 30 minutes to once a day, with the model you choose. <code>/ideas</code> and <code>/daydream</code> work from your phone too.</span></li>
       </ul>
     </div>
-    <div class="mock" role="img" aria-label="Illustration of the Ideas view with example data: Daydream runs every 2 hours with Opus, last run 40 minutes ago; three ideas for the projects website, home-lab and a new garden project, each with its reason and Promote and Drop buttons.">
-      <div class="bar"><img src="icon.png" alt=""><div class="tabs"><span>Cockpit</span><span>Next up</span><span>Inbox</span><span class="on">Ideas<span class="cnt" style="background:var(--dim)">3</span></span><span>Backlog</span><span>Usage</span></div></div>
+    <div class="mock" role="img" aria-label="Illustration of the AI Daydream view with example data: Daydream runs every 2 hours with Opus, last run 40 minutes ago; three ideas for the projects website, home-lab and a new garden project, each with its reason and Promote and Drop buttons.">
+      <div class="bar"><img src="icon.png" alt=""><div class="tabs"><span>Today</span><span>Cockpit</span><span>Board</span><span>Inbox</span><span class="on">AI Daydream<span class="cnt" style="background:var(--dim)">3</span></span><span>Usage</span></div></div>
       <div class="mhead" style="padding:10px 12px 0"><span class="mlbl">Daydream</span><span class="muted" style="font-size:11px">every 2 h with Opus · last run 40 min ago</span><span class="sp"></span><span class="mbtn">Daydream now</span><span class="mbtn gh">Pause</span></div>
       <div class="irow"><div class="ih"><span class="it"><i class="dot c-work"></i> website</span><span>Reuse the new image pipeline for the product pages</span></div>
         <div class="ia">why: the blog got 40% faster with it last week<span style="flex:1"></span><span class="mbtn pri">Promote</span><span class="mbtn gh">Drop</span></div></div>
@@ -453,7 +453,7 @@ footer .cta{justify-content:center}
     <h2>From idea to done, in plain sight.</h2>
     <p class="lead">Every idea, bug and task moves through the same stages: Seed, Shaping, Ready, Doing, Review and Done, with Parked and Dropped for what waits or goes. Two moves are always yours: the go that turns a shaped idea into work, and the OK that marks it done. Everything else moves by itself, and each item keeps a timeline of who moved it and why.</p>
     <div class="mock" role="img" aria-label="Illustration of the Backlog with example data: six columns Seed, Shaping, Ready, Doing, Review and Done; items with a kind such as Feature request, Bug or Decision and tags such as Slides or Testing; a Go button on a shaped item and a Done button on an item in Review.">
-      <div class="bar"><img src="icon.png" alt=""><b>Thalamus</b><div class="tabs"><span>Cockpit</span><span>Next up</span><span>Inbox</span><span>Ideas</span><span class="on">Backlog</span><span>Usage</span></div></div>
+      <div class="bar"><img src="icon.png" alt=""><b>Thalamus</b><div class="tabs"><span>Today</span><span>Cockpit</span><span class="on">Board</span><span>Inbox</span><span>AI Daydream</span><span>Usage</span></div></div>
       <div class="bltool">
         <span class="seg"><span class="on">Work</span><span>Private</span><span>General</span><span>All</span></span>
         <span class="fin">All projects ▾</span><span class="fin">Search items</span>
