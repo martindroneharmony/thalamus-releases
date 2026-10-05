@@ -65,6 +65,7 @@ p.lead{font-size:19px;color:var(--dim);max-width:680px;margin:0 0 28px}
 .mock .tabs{display:flex;gap:2px;margin-left:8px;color:var(--dim);min-width:0}
 .mock .tabs span{padding:2px 8px;border-radius:4px;white-space:nowrap}
 .mock .tabs span.on{color:var(--text);box-shadow:inset 0 -2px 0 var(--text);border-radius:0}
+.mock .cnt.n{background:var(--dim)}
 .mock .cnt{display:inline-block;margin-left:5px;background:var(--amber);color:#151a23;border-radius:8px;padding:0 6px;font-size:10px;font-weight:700;line-height:15px}
 .usage{margin-left:auto;display:flex;align-items:center;gap:12px;color:var(--dim);font-size:11.5px;font-variant-numeric:tabular-nums}
 .usage span{display:inline-flex;align-items:center;gap:6px}
@@ -101,6 +102,8 @@ p.lead{font-size:19px;color:var(--dim);max-width:680px;margin:0 0 28px}
 .row .nm{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .row .d{color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .row .x{display:flex;gap:6px;align-items:center}
+.pie{--p:0;--c:var(--muted);display:inline-block;width:11px;height:11px;border-radius:50%;flex:none;background:conic-gradient(var(--c) calc(var(--p) * 1%),var(--line) 0);-webkit-mask:radial-gradient(circle,transparent 1.5px,#000 2px);mask:radial-gradient(circle,transparent 1.5px,#000 2px)}
+.pie.hi{--c:var(--amber)}.pie.full{--c:#ef5a5a}
 .tag{font-family:var(--mono);font-size:10.5px;color:var(--dim);border:1px solid var(--line);border-radius:4px;padding:0 5px;white-space:nowrap}
 .chip{font-size:10.5px;color:var(--text);border:1px solid var(--line);background:var(--panel2);border-radius:999px;padding:0 8px;white-space:nowrap}
 .otag{font-size:10px;color:var(--dim);border:1px dashed var(--muted);border-radius:4px;padding:0 5px;white-space:nowrap}
@@ -314,39 +317,24 @@ footer .cta{justify-content:center}
   <div class="wrap">
     <p class="eyebrow">The cockpit</p>
     <h2>Everything that runs, on one screen.</h2>
-    <p class="lead">Next up at the top, the board of every session in the middle, your terminals below as tabs. On a wide screen the terminals split into two groups side by side, each with its own tab strip.</p>
-    <div class="mock" role="img" aria-label="Illustration of the Thalamus cockpit with example data: three Next up columns for Work, Private and General with Start and Discard buttons; a board of sessions with states such as working, new answer waiting, answer seen, fresh, needs approval, a session running two background commands and a session started outside; a collapsed Recent section; and two side-by-side terminal groups with their own tabs.">
+    <p class="lead">The board of every session at the top, your terminals below as tabs, and Next up one tab over. On a wide screen the terminals split into two groups side by side, each with its own tab strip.</p>
+    <div class="mock" role="img" aria-label="Illustration of the Thalamus cockpit with example data: a Next up tab with three new suggestions; a board of sessions, each with a small pie showing how full its context window is, with states such as working, new answer waiting, answer seen, fresh, needs approval, a session running two background commands and a session started outside; a collapsed Recent section; and two side-by-side terminal groups with their own tabs.">
       <div class="bar">
         <img src="icon.png" alt=""><b>Thalamus</b>
-        <div class="tabs"><span class="on">Cockpit<span class="cnt">2</span></span><span>Inbox</span><span>Ideas</span><span>Backlog</span><span>Usage</span></div>
+        <div class="tabs"><span class="on">Cockpit<span class="cnt">2</span></span><span>Next up<span class="cnt n">3</span></span><span>Inbox</span><span>Ideas</span><span>Backlog</span><span>Usage</span></div>
         <div class="usage"><span><span class="batt"><i class="mid" style="height:8px"></i></span><b>58%</b></span><span><span class="batt"><i style="height:11px"></i></span><b>81%</b></span></div>
         <span class="gear">⚙</span>
-      </div>
-      <div class="mhead"><span class="mlbl">Next up</span><span class="muted" style="font-size:11px">ranked 12 min ago</span><span class="sp"></span><span class="mbtn gh">Refresh</span></div>
-      <div class="ncols">
-        <div class="ncol"><div class="nt mlbl"><span class="dot c-work"></span>Work</div>
-          <div class="nrow"><span class="tk">Answer the retry question</span><span class="why">billing-api · waiting 25 min</span><span class="na"><span class="mbtn pri">Start</span><span class="mbtn">Discard</span></span></div>
-          <div class="nrow"><span class="tk">Fix the contact form spam</span><span class="why">website · backlog, Next</span></div>
-        </div>
-        <div class="ncol"><div class="nt mlbl"><span class="dot c-private"></span>Private</div>
-          <div class="nrow"><span class="tk">Plan the spring beds</span><span class="why">garden-planner · from the inbox</span></div>
-          <div class="nrow"><span class="tk">Renew the router certificate</span><span class="why">home-lab · expires in 6 days</span></div>
-        </div>
-        <div class="ncol"><div class="nt mlbl"><span class="dot c-general"></span>General</div>
-          <div class="nrow"><span class="tk">Approve the bibliography build</span><span class="why">thesis · needs approval</span></div>
-          <div class="nrow"><span class="tk">Outline chapter 3</span><span class="why">thesis · backlog, Open</span></div>
-        </div>
       </div>
       <div class="mhead"><span class="mlbl">Claude sessions</span><span class="sp"></span><span class="mbtn">+ Task</span><span class="mbtn pri">+ Claude session</span><span class="mbtn">+ PowerShell</span></div>
       <div class="rows">
         <div class="cat"><span class="dot c-work"></span>Work</div>
-        <div class="row sel"><span class="st"><span class="eq"><i></i><i></i><i></i></span></span><span class="nm">billing-api</span><span class="d">working · src/invoices/retry.ts</span><span class="x"><span class="chip">⟳ 2 in background</span><span class="tag">Opus</span></span></div>
-        <div class="row"><span class="st"><span class="bang">!</span></span><span class="nm">website</span><span class="d">Should the hero image be lazy-loaded?</span><span class="x"><span class="tag">Sonnet</span></span></div>
+        <div class="row sel"><span class="st"><span class="eq"><i></i><i></i><i></i></span></span><span class="nm">billing-api</span><span class="d">working · src/invoices/retry.ts</span><span class="x"><span class="chip">⟳ 2 in background</span><span class="tag">Opus</span><span class="pie" style="--p:42"></span></span></div>
+        <div class="row"><span class="st"><span class="bang">!</span></span><span class="nm">website</span><span class="d">Should the hero image be lazy-loaded?</span><span class="x"><span class="tag">Sonnet</span><span class="pie" style="--p:23"></span></span></div>
         <div class="cat"><span class="dot c-private"></span>Private</div>
-        <div class="row"><span class="st"><span class="bang seen">!</span></span><span class="nm">garden-planner</span><span class="d">Tests pass. Shall I merge the watering schedule?</span><span class="x"><span class="tag">Sonnet</span></span></div>
-        <div class="row"><span class="st"><span class="z">z</span><span class="z">Z</span><span class="z">z</span></span><span class="nm">home-lab</span><span class="d">fresh session</span><span class="x"><span class="otag">outside</span><span class="tag">Haiku</span></span></div>
+        <div class="row"><span class="st"><span class="bang seen">!</span></span><span class="nm">garden-planner</span><span class="d">Tests pass. Shall I merge the watering schedule?</span><span class="x"><span class="tag">Sonnet</span><span class="pie hi" style="--p:84"></span></span></div>
+        <div class="row"><span class="st"><span class="z">z</span><span class="z">Z</span><span class="z">z</span></span><span class="nm">home-lab</span><span class="d">fresh session</span><span class="x"><span class="otag">outside</span><span class="tag">Haiku</span><span class="pie" style="--p:4"></span></span></div>
         <div class="cat"><span class="dot c-general"></span>General</div>
-        <div class="row"><span class="st"><span class="q">?</span></span><span class="nm">thesis</span><span class="d">needs your approval: run latexmk -pdf?</span><span class="x"><span class="tag">Opus</span></span></div>
+        <div class="row"><span class="st"><span class="q">?</span></span><span class="nm">thesis</span><span class="d">needs your approval: run latexmk -pdf?</span><span class="x"><span class="tag">Opus</span><span class="pie full" style="--p:93"></span></span></div>
         <div class="recent">▸ Recent (3) · ended sessions, ready to resume</div>
       </div>
       <div class="groups">
@@ -366,7 +354,7 @@ footer .cta{justify-content:center}
         </div>
       </div>
     </div>
-    <p class="muted small note-ex">Illustration with example data.</p>
+    <p class="muted small note-ex">Illustration with example data. The small pie after the model shows how full each session's context window is: grey while there is room, amber from 80 %, red from 90 %, when compaction is near.</p>
     <ul class="legend" aria-label="Session states">
       <li><span class="st" aria-hidden="true"><span class="eq"><i></i><i></i><i></i></span></span>working</li>
       <li><span class="st" aria-hidden="true"><span class="bang">!</span></span>new answer waiting</li>
@@ -383,10 +371,28 @@ footer .cta{justify-content:center}
     <p class="eyebrow">Next up and Inbox</p>
     <h2>From a board to a conductor.</h2>
     <p class="lead">Thalamus does not just show what runs. It suggests what to do next and puts every stray idea where it belongs.</p>
+    <div class="mock" role="img" aria-label="Illustration of the Next up tab with example data: three columns for Work, Private and General, each with ranked suggestions and Start and Discard buttons." style="margin:22px 0 26px">
+      <div class="bar"><img src="icon.png" alt=""><div class="tabs"><span>Cockpit</span><span class="on">Next up</span><span>Inbox</span><span>Ideas</span><span>Backlog</span><span>Usage</span></div></div>
+      <div class="mhead"><span class="mlbl">Next up</span><span class="muted" style="font-size:11px">ranked 12 min ago</span><span class="sp"></span><span class="mbtn gh">Refresh</span></div>
+      <div class="ncols">
+        <div class="ncol"><div class="nt mlbl"><span class="dot c-work"></span>Work</div>
+          <div class="nrow"><span class="tk">Answer the retry question</span><span class="why">billing-api · waiting 25 min</span><span class="na"><span class="mbtn pri">Start</span><span class="mbtn">Discard</span></span></div>
+          <div class="nrow"><span class="tk">Fix the contact form spam</span><span class="why">website · backlog, Next</span></div>
+        </div>
+        <div class="ncol"><div class="nt mlbl"><span class="dot c-private"></span>Private</div>
+          <div class="nrow"><span class="tk">Plan the spring beds</span><span class="why">garden-planner · from the inbox</span></div>
+          <div class="nrow"><span class="tk">Renew the router certificate</span><span class="why">home-lab · expires in 6 days</span></div>
+        </div>
+        <div class="ncol"><div class="nt mlbl"><span class="dot c-general"></span>General</div>
+          <div class="nrow"><span class="tk">Approve the bibliography build</span><span class="why">thesis · needs approval</span></div>
+          <div class="nrow"><span class="tk">Outline chapter 3</span><span class="why">thesis · backlog, Open</span></div>
+        </div>
+      </div>
+    </div>
     <div class="two top">
       <div>
         <h3>Next up: three short lists</h3>
-        <p class="muted">Every 30 minutes Claude looks at the sessions waiting for you, the inbox and the backlog, and ranks what to do next in three columns: Work, Private and General.</p>
+        <p class="muted">Every 30 minutes Claude looks at the sessions waiting for you, the inbox and the backlog, and ranks what to do next in three columns: Work, Private and General. They have their own tab right of the Cockpit (<kbd>Ctrl+6</kbd>), which counts what is new since you last looked.</p>
         <ul class="list">
           <li><span><b>Start or Discard.</b> Start hands the item to its project's session, or opens one.</span></li>
           <li><span><b>It learns.</b> What you start and what you skip shapes the next ranking.</span></li>
@@ -397,7 +403,7 @@ footer .cta{justify-content:center}
         <h3>Inbox: drop it and forget it</h3>
         <p class="muted">Paste or drop anything into Thalamus: text, a screenshot, a file, with a comment if you like. Claude files clear items straight into the right Engram project. Unclear ones wait with a suggestion, and <b>Wrong project</b> corrects a filing and teaches it for next time.</p>
         <div class="mock" role="img" aria-label="Illustration of the Inbox with example data: one screenshot filed automatically to the website project with a Wrong project button, and one note waiting with the suggestion home-lab and buttons to file or discard it." style="margin-top:20px">
-          <div class="bar"><img src="icon.png" alt=""><div class="tabs"><span>Cockpit</span><span class="on">Inbox</span><span>Ideas</span><span>Backlog</span><span>Usage</span></div></div>
+          <div class="bar"><img src="icon.png" alt=""><div class="tabs"><span>Cockpit</span><span>Next up</span><span class="on">Inbox</span><span>Ideas</span><span>Backlog</span><span>Usage</span></div></div>
           <div class="irow"><div class="ih"><span class="it">09:12</span><span>Footer overlaps the cookie banner on mobile</span></div>
             <span class="att"><i></i>screenshot.png</span>
             <div class="ia">Filed to <b style="color:var(--text)">website</b> · 94% sure<span style="flex:1"></span><span class="mbtn">Wrong project</span></div></div>
@@ -422,7 +428,7 @@ footer .cta{justify-content:center}
       </ul>
     </div>
     <div class="mock" role="img" aria-label="Illustration of the Ideas view with example data: Daydream runs every 2 hours with Opus, last run 40 minutes ago; three ideas for the projects website, home-lab and a new garden project, each with its reason and Greenlight and Discard buttons.">
-      <div class="bar"><img src="icon.png" alt=""><div class="tabs"><span>Cockpit</span><span>Inbox</span><span class="on">Ideas<span class="cnt" style="background:var(--dim)">3</span></span><span>Backlog</span><span>Usage</span></div></div>
+      <div class="bar"><img src="icon.png" alt=""><div class="tabs"><span>Cockpit</span><span>Next up</span><span>Inbox</span><span class="on">Ideas<span class="cnt" style="background:var(--dim)">3</span></span><span>Backlog</span><span>Usage</span></div></div>
       <div class="mhead" style="padding:10px 12px 0"><span class="mlbl">Daydream</span><span class="muted" style="font-size:11px">every 2 h with Opus · last run 40 min ago</span><span class="sp"></span><span class="mbtn">Daydream now</span><span class="mbtn gh">Pause</span></div>
       <div class="irow"><div class="ih"><span class="it"><i class="dot c-work"></i> website</span><span>Reuse the new image pipeline for the product pages</span></div>
         <div class="ia">why: the blog got 40% faster with it last week<span style="flex:1"></span><span class="mbtn pri">Greenlight</span><span class="mbtn gh">Discard</span></div></div>
@@ -440,7 +446,7 @@ footer .cta{justify-content:center}
     <h2>A board for each part of your life.</h2>
     <p class="lead">A Kanban board per category, with Open, Next, Doing and Done, built from Engram: items you marked as backlog plus each project's known gaps. Cards are grouped by project, with search and a project filter. Done is written back to Engram, and Reopen opens a card again everywhere, on every laptop.</p>
     <div class="mock" role="img" aria-label="Illustration of the Backlog with example data: the Work category with four lanes, Open, Next, Doing and Done; cards grouped by project, each with a clear title, why and done when; one card flagged Looks done; buttons Suggest from Engram and Clarify.">
-      <div class="bar"><img src="icon.png" alt=""><b>Thalamus</b><div class="tabs"><span>Cockpit</span><span>Inbox</span><span>Ideas</span><span class="on">Backlog</span><span>Usage</span></div></div>
+      <div class="bar"><img src="icon.png" alt=""><b>Thalamus</b><div class="tabs"><span>Cockpit</span><span>Next up</span><span>Inbox</span><span>Ideas</span><span class="on">Backlog</span><span>Usage</span></div></div>
       <div class="bltool">
         <span class="seg"><span class="on">Work</span><span>Private</span><span>General</span><span>All</span></span>
         <span class="fin">All projects ▾</span><span class="fin">Search cards</span>
@@ -531,7 +537,7 @@ footer .cta{justify-content:center}
       <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div><h3>Pick and switch the model</h3><p>Choose the model when you start a session, with a guide to its speed and how much of your limits it uses. Switch it later with a click on the board.</p></div>
       <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M10 16h4M10 12h4M10 8h4"/></svg></div><h3>Limits and token use</h3><p>Your 5-hour and weekly limits as two batteries in the title bar. Token history per day, week or month by project and model, and a token panel for each session.</p></div>
       <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3>Commands wait for you</h3><p>Commands proposed for a PowerShell run only after you approve them. Tasks for a project go to its session, or open one, and never to two sessions at once.</p></div>
-      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg></div><h3>Settings your way</h3><p>Dark, light or system theme, size per screen, terminal font, side-by-side terminals and your own shortcuts: <kbd>Ctrl+N</kbd> Claude session, <kbd>Ctrl+P</kbd> PowerShell, <kbd>Ctrl+1</kbd>–<kbd>5</kbd> views, <kbd>Ctrl+,</kbd> settings.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg></div><h3>Settings your way</h3><p>Dark, light or system theme, size per screen, terminal font, side-by-side terminals and your own shortcuts: <kbd>Ctrl+N</kbd> Claude session, <kbd>Ctrl+P</kbd> PowerShell, <kbd>Ctrl+1</kbd>–<kbd>6</kbd> views, <kbd>Ctrl+,</kbd> settings.</p></div>
     </div>
   </div>
 </section>
