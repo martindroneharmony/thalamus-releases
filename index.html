@@ -187,6 +187,27 @@ p.lead{font-size:19px;color:var(--dim);max-width:680px;margin:0 0 28px}
 .ph .top b{display:block;font-size:13px}
 .ph .top small{color:#7f91a4;font-size:11px}
 .chat{padding:10px 10px 14px;display:flex;flex-direction:column;gap:8px}
+/* the phone page (8 Oct 2026) */
+.pp{background:#16181d;color:#e8eaee;display:flex;flex-direction:column}
+.pbar{display:flex;justify-content:space-between;align-items:center;padding:16px 14px 10px;border-bottom:1px solid #323743}
+.pbar b{font-size:13.5px}
+.plive{font-size:10.5px;color:#a0a7b3;border:1px solid #323743;border-radius:999px;padding:1px 8px}
+.plive::before{content:"\25CF  ";color:#7cb518}
+.pbody{padding:10px 10px 12px;display:flex;flex-direction:column;gap:8px}
+.ph2{font-weight:650;font-size:14.5px;margin:2px 2px 2px}
+.ph2 small{font-weight:500;font-size:11px;color:#a0a7b3;margin-left:4px}
+.pcard{background:#1f2229;border:1px solid #323743;border-radius:12px;padding:9px 10px;display:flex;flex-direction:column;gap:5px}
+.pl{font-size:11.5px;color:#c9ced6}
+.pt{font-weight:600}
+.pcard pre{margin:0;padding:6px 8px;border-radius:7px;background:#16181d;border:1px solid #323743;font:11px/1.4 var(--mono);white-space:pre-wrap}
+.pp2{font-size:11px;color:#a0a7b3;display:flex;align-items:center;gap:6px}
+.cd{width:7px;height:7px;border-radius:50%;display:inline-block}
+.cd.w{background:#3987e5}.cd.p{background:#c062b8}.cd.g{background:#199e70}
+.pbt{display:flex;gap:6px;margin-top:2px}
+.pbt span{border:1px solid #323743;border-radius:8px;padding:5px 10px;font-size:11.5px}
+.pbt .pri{background:#e8eaee;color:#16181d;border-color:#e8eaee;font-weight:600}
+.ptabs{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid #323743;padding:8px 2px 12px;font-size:10.5px;color:#a0a7b3;text-align:center}
+.ptabs .on{color:#e8eaee;font-weight:650}
 .msg{background:#182533;border-radius:12px 12px 12px 4px;padding:8px 10px;max-width:92%;color:#e8eef4}
 .msg.me{align-self:flex-end;background:#2b5278;border-radius:12px 12px 4px 12px}
 .msg .mt{font-size:10px;color:#7f91a4;text-align:right;margin-top:3px}
@@ -277,7 +298,7 @@ footer .cta{justify-content:center}
       <a href="#next">For you</a>
       <a href="#daydream">Daydream</a>
       <a href="#backlog">Board</a>
-      <a href="#telegram">Telegram</a>
+      <a href="#phone">Phone</a>
       <a href="#private">Private</a>
       <a href="#engram">Engram</a>
       <a href="#install">Install</a>
@@ -505,10 +526,10 @@ footer .cta{justify-content:center}
       <div class="card"><h3>Attach what you have</h3><p>A new item takes files, a pasted screenshot or a long paste along with its sentence: pick them, drop them on the New box or paste them. They stay with the item in its project folder, where the session that works on it can open them, and git never sees them.</p></div>
       <div class="card"><h3>Park and drop</h3><p>Park an item with the day it comes back, and it comes back by itself; or drop it with a reason. Daydream never proposes a dropped idea again.</p></div>
       <div class="card"><h3>Review, then publish</h3><p>Finished work arrives with its hand tests as a checklist; an item tagged Testing is done once they are ticked. Slides, documents and designs get a second look against done-when before you see them. Publish runs the project's PUBLISH.md through its session, only after your OK, and from your phone only with your authenticator code.</p></div>
-      <div class="card"><h3>It asks you first</h3><p>"Ask me questions" on an idea and Claude asks the few questions it really needs, a few at a time or one by one with a recommended answer, here or on Telegram. Then it writes the brief: problem, why, outcome, done when. Your Go makes it Ready and turns it into self-contained steps, each with its acceptance criteria, what must not change and the facts a session needs; bigger items also get an architecture note and the brief, plan and steps as files in their folder. The steps are checked before they run; a plan that falls short is revised once by itself, and only one that still falls short asks you: back to shaping, or take it as it is. The brief also names the folder it runs in, so Start is one click: to that folder's waiting session, or a new one. Start also sends the instruction and checks that Claude took it; if Claude did not, the card and a notification say so.</p></div>
+      <div class="card"><h3>It asks you first</h3><p>"Ask me questions" on an idea and Claude asks the few questions it really needs, a few at a time or one by one with a recommended answer, here or on your phone. Then it writes the brief: problem, why, outcome, done when. Your Go makes it Ready and turns it into self-contained steps, each with its acceptance criteria, what must not change and the facts a session needs; bigger items also get an architecture note and the brief, plan and steps as files in their folder. The steps are checked before they run; a plan that falls short is revised once by itself, and only one that still falls short asks you: back to shaping, or take it as it is. The brief also names the folder it runs in, so Start is one click: to that folder's waiting session, or a new one. Start also sends the instruction and checks that Claude took it; if Claude did not, the card and a notification say so.</p></div>
       <div class="card"><h3>Steps in parallel</h3><p>Each step of a bigger item can start on its own, in its own Claude session and its own git worktree and branch, next to the session that plans the project. Each step gets its item's notes in its worktree, kept apart from other items and out of git. Every step hands over its proof; your Done merges the branches back, only into a clean working copy, and stops on a conflict. Dropping or finishing the item clears its notes, except the ones you edited.</p></div>
       <div class="card"><h3>Health at a glance</h3><p>Below your Claude sessions: the PowerShells and background jobs that run, CPU and memory with the tab that works hard, the tokens of the last hour and when your 5-hour limit runs out at this pace, and how full each session's context is, with Compact one click away. When Claude Code updates itself, one click restarts it in its tab with the same conversation.</p></div>
-      <div class="card"><h3>Run all steps</h3><p>After your Go, let Thalamus run a plan's steps one after another by itself, each test-first with its own proof. It stops at the first step that misses a criterion or ends without proof, and before any step that brings a link, a download or a destructive command, and asks you, here or on Telegram. It keeps to your limits, and Done stays yours.</p></div>
+      <div class="card"><h3>Run all steps</h3><p>After your Go, let Thalamus run a plan's steps one after another by itself, each test-first with its own proof. It stops at the first step that misses a criterion or ends without proof, and before any step that brings a link, a download or a destructive command, and asks you, here or on your phone. It keeps to your limits, and Done stays yours.</p></div>
       <div class="card"><h3>Limits and proof</h3><p>At most three items in Doing and a handful waiting for you, both your settings, so work does not pile up faster than you can check it. A session that finishes hands over its proof: each done-when point with its evidence, what it could not verify, and what to try yourself. Open the item in Review and its outcome sits on top, in the session's own words; your Done moves it at once, and the record in your memory follows behind. For you, the captures waiting for a project and AI Daydream's ideas sit in one row of tabs above the lanes. Everything that needs your decision waits in one list: For you, on the Board.</p></div>
       <div class="card"><h3>Dates and waits</h3><p>Give an item a hard deadline or a target date: Thalamus says when it is overdue or at risk, and Next up weighs it. Mark what waits for a person, with a day to follow up, or for another item. Repeat chores monthly or yearly.</p></div>
       <div class="card"><h3>One line from any session</h3><p>Claude sessions in any project put an item on the board with <code>thalamus add --project … --title …</code>, with the same checks as the New box. The card shows at once; with Thalamus closed it is there at the next start.</p></div>
@@ -517,37 +538,30 @@ footer .cta{justify-content:center}
   </div>
 </section>
 
-<section id="telegram">
+<section id="phone">
   <div class="wrap two">
     <div>
-      <p class="eyebrow">Telegram</p>
-      <h2>Your phone, only when it matters.</h2>
-      <p class="muted">Pair your own Telegram bot with your account, and Thalamus can reach you when you step away. It is quiet by design: it only pings when you are away from the laptop, idle or locked.</p>
+      <p class="eyebrow">Your phone</p>
+      <h2>The board in your pocket, Face ID on what matters.</h2>
+      <p class="muted">Between meetings or on the train, open Thalamus on your phone: the board, what waits for you, and the decisions, from the Thalamus running on your laptop. It travels only through your own Tailscale network, never the open internet.</p>
       <ul class="list">
-        <li><span><b>You choose how loud.</b> Off, Approvals only, Important or Everything. A cap on messages per hour, and quiet hours that end with a single summary.</span></li>
-        <li><span><b>Approvals at once, answers batched.</b> Approval requests arrive straight away. Waiting answers collect in one silent message that updates in place.</span></li>
-        <li><span><b>Reply to answer.</b> Reply to a ping and your text goes to that session as its next instruction. Write <code>Project: text</code> to reach a project, and Thalamus opens a session when none runs. You hear when it went in. Questions for you arrive here too: reply to answer them, and tap Go on a brief or Done on finished work.</span></li>
-        <li><span><b>Capture on the go.</b> Send an idea, a photo or a file, or use <code>/idea</code>: Thalamus sorts it and replies where it went, with a Wrong project button, or that it waits in the inbox. A quick question to the bot gets an answer instead. <code>/next</code> shows what is up, with Go and Skip; <code>/ideas</code> brings Daydream's proposals.</span></li>
-        <li><span><b>Look in and act.</b> <code>/board</code> shows everything that runs and what waits in the queue, with Cancel, <code>/tail</code> the last lines of a tab, <code>/inbox</code> what waits to be filed. <code>/send</code> gives a project's session an instruction, and opens one when none is running; <code>/sh</code> queues a PowerShell command that waits for your approval.</span></li>
-        <li><span><b>Approvals with a code.</b> Shell commands and Claude permission prompts are approved with a code from your authenticator app, set up once by scanning a QR code. A code approves exactly the prompt you saw, never a newer one.</span></li>
+        <li><span><b>Paired once, revoked in a click.</b> Scan a QR code from Settings › Phone. The phone keeps its own key; Revoke cuts it off at once, open page and all.</span></li>
+        <li><span><b>Face ID, not codes.</b> After 15 minutes away, and before anything risky (approving a command, a Done that merges branches), Face ID or your fingerprint. It approves exactly what you see, the whole command, once.</span></li>
+        <li><span><b>Decide on the way.</b> Go on a brief, Start, Done, answer the questions, accept a plan or send it back, approve or deny. The board one stage at a time, live.</span></li>
+        <li><span><b>Capture and ask.</b> An idea, a photo or a dictated note to the inbox or straight to a project. A quick question to a running session or the General session, answered on the phone.</span></li>
+        <li><span><b>Notifications that say little.</b> Only while you are away from the laptop, with levels, categories, quiet hours and Mute, set from the phone or from Settings. A notification says how many things wait, never what or for whom.</span></li>
       </ul>
     </div>
-    <div class="phone" role="img" aria-label="Illustration of a Telegram chat with the Thalamus bot, with example data: a silent message Waiting for you (2) listing two sessions with Reply buttons; an approval request for a command in the home-lab project with Approve and Deny buttons; and the answer to /next with Go and Skip buttons.">
-      <div class="ph">
-        <div class="top"><img src="icon.png" alt=""><div><b>Thalamus</b><small>your bot</small></div></div>
-        <div class="chat">
-          <div class="msg"><b>Waiting for you (2)</b>
-            <div class="li"><b>website</b> · Should the hero image be lazy-loaded?</div>
-            <div class="li"><b>garden-planner</b> · Tests pass. Shall I merge the watering schedule?</div>
-            <div class="mt">silent · updated 14:32</div></div>
-          <div class="kb k2 wrapkb"><span>Reply website</span><span>Reply garden-planner</span></div>
-          <div class="msg"><b>Approval needed</b> · home-lab<br>PowerShell wants to run<br><code>docker compose pull</code>
-            <div class="mt">14:35</div></div>
-          <div class="kb k2 wrapkb"><span>Approve…</span><span>Deny</span></div>
-          <div class="msg me">/next<div class="mt">14:41</div></div>
-          <div class="msg"><b>Next up · Work</b><br>billing-api: answer the retry question (waiting 25 min)<div class="mt">14:41</div></div>
-          <div class="kb k2 wrapkb"><span>Go</span><span>Skip</span></div>
+    <div class="phone" role="img" aria-label="Illustration of the Thalamus phone page with example data: For you with three entries. An approval showing the whole command docker compose pull for the home-lab project, with Approve (Face ID) and Deny; a brief ready for Go in website; and Review and Done for garden-planner, which merges two step branches. Tabs at the bottom: For you, Board, Capture, Ask, Alerts.">
+      <div class="ph pp">
+        <div class="pbar"><b>Thalamus</b><span class="plive">Live</span></div>
+        <div class="pbody">
+          <div class="ph2">For you <small>3</small></div>
+          <div class="pcard"><div class="pl">Approve: PowerShell command</div><pre>docker compose pull</pre><div class="pp2"><i class="cd w"></i>work/home-lab</div><div class="pbt"><span class="pri">Approve 🔒</span><span>Deny</span></div></div>
+          <div class="pcard"><div class="pl">Brief ready for your Go</div><div class="pt">Hero image loads lazily</div><div class="pp2"><i class="cd w"></i>work/website</div><div class="pbt"><span class="pri">Go ✓</span><span>Open</span></div></div>
+          <div class="pcard"><div class="pl">Review and Done · merges 2 step branches</div><div class="pt">Watering schedule</div><div class="pp2"><i class="cd p"></i>private/garden-planner</div><div class="pbt"><span class="pri">Done ✓ 🔒</span><span>Open</span></div></div>
         </div>
+        <div class="ptabs"><span class="on">For you</span><span>Board</span><span>Capture</span><span>Ask</span><span>Alerts</span></div>
       </div>
     </div>
   </div>
@@ -579,7 +593,7 @@ footer .cta{justify-content:center}
     <div class="flow">
       <div class="box"><h3>Claude Code sessions</h3><p>In any terminal. Hooks report start, prompts, tool use, waiting and end. The status line reports limits, model and context fill.</p></div>
       <div class="arrow">→ 127.0.0.1 →</div>
-      <div class="box hub"><h3>Thalamus</h3><p>Tray app with the cockpit of sessions, the Board (New, For you, Daydream ideas, the items), usage, Next up in the background, the terminals and the optional Telegram bot. Fetches signed updates and installs them when you say so.</p></div>
+      <div class="box hub"><h3>Thalamus</h3><p>Tray app with the cockpit of sessions, the Board (New, For you, Daydream ideas, the items), usage, Next up in the background, the terminals and the optional phone page. Fetches signed updates and installs them when you say so.</p></div>
       <div class="arrow">⇄ pipe ⇄</div>
       <div class="box"><h3>Shell host</h3><p>A background process that owns your terminals, so they outlive the window and every update.</p></div>
     </div>
@@ -591,12 +605,12 @@ footer .cta{justify-content:center}
     <div>
       <p class="eyebrow">Private by design</p>
       <h2>Your laptop does the work.</h2>
-      <p class="muted">Thalamus has no server and no telemetry. It runs on your own machine and only reads what Claude Code writes there. The only messages that leave it are the Telegram pings you switch on.</p>
+      <p class="muted">Thalamus has no server and no telemetry. It runs on your own machine and only reads what Claude Code writes there. Your phone reaches it only through your own Tailscale network, and the only messages that leave it are the push notifications you switch on, which say how many things wait and nothing more.</p>
     </div>
     <ul class="list">
       <li><span><b>Local only.</b> The server listens on 127.0.0.1, needs a per-install token and refuses anything a web page could send.</span></li>
       <li><span><b>Your own Claude login.</b> Ranking, filing and clarifying run as Claude calls on your own plan. No other AI service is involved.</span></li>
-      <li><span><b>Secrets stay put.</b> Tokens live in one local file, never in logs or messages; your Telegram token and approval secret are encrypted with Windows' own data protection. Text sent to Telegram is redacted first.</span></li>
+      <li><span><b>Secrets stay put.</b> Tokens live in one local file, never in logs or messages; the key that signs notifications to your phone is encrypted with Windows' own data protection, and the phone keeps only its own key, which Thalamus stores as a hash.</span></li>
       <li><span><b>Nothing runs by itself.</b> Shell commands always wait for your approval, and text sent to a Claude session can never turn into one. Everything Thalamus does is kept in an audit log you can read in Settings.</span></li>
       <li><span><b>Report-only hooks.</b> The token Claude's hooks use can report events, nothing else. It cannot start, read or control a shell.</span></li>
       <li><span><b>Your settings, your call.</b> Hooks are added to your Claude settings only after you see the exact change and confirm it. A backup is made first.</span></li>
@@ -633,7 +647,7 @@ Import-Certificate $c -CertStoreLocation Cert:\CurrentUser\TrustedPublisher | Ou
       <li><div><h3>Find it in the tray</h3><p>Thalamus starts with Windows and lives in the tray. Click the icon to open the cockpit; the gear (<kbd>Ctrl+,</kbd>) opens the settings.</p></div></li>
       <li><div><h3>Let your sessions report</h3><p>Click <b>Set up the hooks…</b>. Thalamus shows exactly what it adds to your Claude settings and makes a backup first.</p></div></li>
       <li><div><h3>Start Claude anywhere</h3><p>Run <code>claude</code> in any terminal, or press <kbd>Ctrl+N</kbd> in Thalamus and pick a project. The session appears on the board.</p></div></li>
-      <li><div><h3>Optional: your phone</h3><p>In Settings, under Telegram, pair your own bot and scan the QR code with your authenticator app. Pick how much you want to hear.</p></div></li>
+      <li><div><h3>Optional: your phone</h3><p>Install Tailscale on the laptop and the phone and switch on HTTPS certificates for your tailnet. In Settings › Phone, switch the phone page on and choose <b>Pair a phone</b>; scan the code with the phone's camera and set up Face ID. Add it to the Home Screen for notifications.</p></div></li>
       <li><div><h3>Optional: limits and context fill</h3><p>If you use a Claude status line script in PowerShell, add this so it also passes the limits and each session's context fill to Thalamus (<code>$raw</code> is the JSON your script read from standard input):</p>
 <pre class="code">try { $t = Get-Content "$env:LOCALAPPDATA\Thalamus\report.json" -Raw -ErrorAction Stop | ConvertFrom-Json
       Invoke-RestMethod -Uri $t.url -Method Post -Headers @{ Authorization = "Bearer $($t.token)" } `
@@ -651,7 +665,7 @@ Import-Certificate $c -CertStoreLocation Cert:\CurrentUser\TrustedPublisher | Ou
       <div class="card"><h3>Claude Code</h3><p class="muted">The <code>claude</code> command line, signed in with your plan.</p></div>
       <div class="card"><h3>PowerShell 7</h3><p class="muted"><code>pwsh</code>, used for the terminals Thalamus opens.</p></div>
       <div class="card"><h3>Engram</h3><p class="muted">Optional, for the inbox filing and the backlog.</p></div>
-      <div class="card"><h3>Telegram</h3><p class="muted">Optional, with an authenticator app for approvals from your phone.</p></div>
+      <div class="card"><h3>Tailscale</h3><p class="muted">Optional, on the laptop and your phone, for the phone page.</p></div>
       <div class="card"><h3>Windows Terminal</h3><p class="muted">Optional, for continuing a session outside Thalamus.</p></div>
     </div>
   </div>
