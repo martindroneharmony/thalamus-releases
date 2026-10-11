@@ -65,6 +65,7 @@ p.lead{font-size:19px;color:var(--dim);max-width:680px;margin:0 0 28px}
 .mock .tabs{display:flex;gap:2px;margin-left:8px;color:var(--dim);min-width:0}
 .mock .tabs span{padding:2px 8px;border-radius:4px;white-space:nowrap}
 .mock .tabs span.on{color:var(--text);box-shadow:inset 0 -2px 0 var(--text);border-radius:0}
+.mock .tabs span.vsep{width:1px;height:16px;padding:0;margin:0 6px;background:var(--line);align-self:center;border-radius:0}
 .mock .cnt.n{background:var(--dim)}
 .mock .cnt{display:inline-block;margin-left:5px;background:var(--amber);color:#151a23;border-radius:8px;padding:0 6px;font-size:10px;font-weight:700;line-height:15px}
 .usage{margin-left:auto;display:flex;align-items:center;gap:12px;color:var(--dim);font-size:11.5px;font-variant-numeric:tabular-nums}
@@ -297,6 +298,7 @@ footer .cta{justify-content:center}
   .mock .bar b{display:none}
   .mock .tabs{margin-left:0}
   .mock .tabs span{padding:2px 5px}
+  .mock .tabs span.opt,.mock .bar .opt{display:none}
   .stage,.stage img,.stage svg{width:200px;height:200px}
   .stage svg{transform:scale(.77);transform-origin:0 0;width:260px;height:260px}
   .stage .node{display:none}
@@ -371,12 +373,12 @@ footer .cta{justify-content:center}
     <p class="eyebrow">The cockpit</p>
     <h2>Everything that runs, on one screen.</h2>
     <p class="lead">The board of every session at the top, your terminals below as tabs, and the Board one tab over. On a wide screen the terminals split into two groups side by side, each with its own tab strip.</p>
-    <div class="mock" role="img" aria-label="Illustration of the Thalamus cockpit with example data: a Copy link menu beside a web link in a terminal, with a file link below it;the Board tab counting four things that wait for your decision; a board of sessions, each with a small pie showing how full its context window is, with states such as working, new answer waiting, answer seen, fresh, needs approval, a session running two background commands and a session started outside; a collapsed Recent section; and two side-by-side terminal groups with their own tabs.">
+    <div class="mock" role="img" aria-label="Illustration of the Thalamus cockpit with example data: a Copy link menu beside a web link in a terminal, with a file link below it; after Cockpit, Board and Usage the tabs Approvals with one waiting and Questions with two; the Board tab counting four things that wait for your decision; a board of sessions, each with a small pie showing how full its context window is, with states such as working, new answer waiting, answer seen, fresh, needs approval, a session running two background commands and a session started outside; a collapsed Recent section; and two side-by-side terminal groups with their own tabs.">
       <div class="bar">
         <img src="icon.png" alt=""><b>Thalamus</b>
-        <div class="tabs"><span class="on">Cockpit<span class="cnt">2</span></span><span>Board<span class="cnt n">4</span></span><span>Usage</span></div>
+        <div class="tabs"><span class="on">Cockpit<span class="cnt">2</span></span><span>Board<span class="cnt n">4</span></span><span class="opt">Usage</span><span class="vsep"></span><span>Approvals<span class="cnt">1</span></span><span>Questions<span class="cnt n">2</span></span></div>
         <div class="usage"><span><span class="batt"><i class="mid" style="height:8px"></i></span><b>58%</b></span><span><span class="batt"><i style="height:11px"></i></span><b>81%</b></span></div>
-        <span class="mbtn">Focus</span><span class="gear">⚙</span>
+        <span class="mbtn opt">Focus</span><span class="gear">⚙</span>
       </div>
       <div class="mhead"><span class="mbtn pri">+ Claude session ▾</span><span class="mbtn">PowerShell</span><span class="mbtn">General</span><span class="mbtn">+ Task</span><span class="sp"></span><span class="fin" style="min-width:70px">Opus ▾</span></div>
       <div class="rows">
