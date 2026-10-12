@@ -83,6 +83,20 @@ p.lead{font-size:19px;color:var(--dim);max-width:680px;margin:0 0 28px}
 .mock .bar b{font-weight:600}
 .mock .tabs{display:flex;gap:2px;margin-left:8px;color:var(--dim);min-width:0;overflow:hidden;flex:1 1 0}
 .mock,.mock .bar,.heroshot{min-width:0}
+/* the Decisions tab */
+.drows{display:grid;gap:8px;padding:8px 14px 14px}
+.drow{border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:9px 11px;min-width:0}
+.drow.sel{border-color:var(--muted)}
+.drow .dm{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:4px}
+.drow .dm .ago{margin-left:auto;color:var(--dim);font-size:11px}
+.drow .dt{border:1px solid var(--line);border-radius:4px;padding:0 6px;font-size:10.5px;color:var(--dim);font-family:ui-monospace,Consolas,monospace}
+.drow .dq{margin:2px 0 6px}
+.drow .do{display:flex;align-items:baseline;gap:8px;margin:2px 0}
+.drow .do i{flex:none;width:9px;height:9px;border:1px solid var(--dim);border-radius:50%;transform:translateY(1px)}
+.drow .do i.on{background:var(--text);border-color:var(--text);box-shadow:inset 0 0 0 2px var(--panel)}
+.drow .do small{color:var(--dim)}
+.drow pre{margin:4px 0 6px;background:#0b0e13;border:1px solid var(--line);border-radius:6px;padding:6px 9px;font-size:11.5px;white-space:pre-wrap;overflow-wrap:anywhere}
+.drow .da{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
 .mock .tabs span{padding:2px 8px;border-radius:4px;white-space:nowrap}
 .mock .tabs span.on{color:var(--text);box-shadow:inset 0 -2px 0 var(--text);border-radius:0}
 .mock .tabs span.vsep{width:1px;height:16px;padding:0;margin:0 6px;background:var(--line);align-self:center;border-radius:0}
@@ -581,6 +595,32 @@ footer .cta{justify-content:center}
       <div class="card"><h3>Review, then publish</h3><p>Finished work arrives with its hand tests as a checklist. Slides, documents and designs get a second look against done-when before you see them. Publish runs only after your OK, and from your phone only after Face ID or your fingerprint.</p></div>
       <div class="card"><h3>Approvals, Decisions and Questions</h3><p>Three tabs gather what waits for you: every permission prompt the moment it is raised, with its command and risk; every choice Claude offers, its option questions and plan approvals; and every open question from sessions, shaping and plans. Answer right there, and Show all gives the whole command, file or plan behind a row. The tabs vanish when nothing waits.</p></div>
     </div>
+    <div class="mock" id="decisions-tab" role="img" style="margin-top:22px;scroll-margin-top:80px" aria-label="Illustration of the Decisions tab with example data: Claude asks which watering schedule a timer should start with, with two options and a Send button; below it a plan approval shows a three-step plan, opened with Show all so that the whole plan and what Claude said can be read and copied.">
+      <div class="bar"><img src="icon.png" alt=""><b>Thalamus</b><div class="tabs"><span>Cockpit</span><span>Board<span class="cnt n">4</span></span><span class="opt">Usage</span><span class="vsep"></span><span>Approvals<span class="cnt">1</span></span><span class="on">Decisions<span class="cnt">2</span></span><span>Questions<span class="cnt n">2</span></span></div></div>
+      <div class="mhead"><b>Decisions</b><span class="muted" style="font-size:11.5px">2 open · oldest first</span></div>
+      <div class="drows">
+        <div class="drow sel">
+          <div class="dm"><b>garden-planner</b><span class="dt">Claude asks</span><span class="ago">3 min</span></div>
+          <div class="mlbl">Schedule</div>
+          <div class="dq">Which watering schedule should the timer start with?</div>
+          <div class="do"><i class="on"></i><span>Every morning <small>· once a day at 6:00</small></span></div>
+          <div class="do"><i></i><span>Every other day <small>· saves water in cool weeks</small></span></div>
+          <div class="da"><span class="mbtn gh">Open</span><span class="mbtn gh">Show all</span><span class="mbtn pri">Send</span></div>
+        </div>
+        <div class="drow">
+          <div class="dm"><b>web-shop</b><span class="dt">Plan approval</span><span class="ago">1 min</span></div>
+          <div class="dq">Claude finished its plan and asks how to go on. Choose in its tab.</div>
+          <pre>1. Give an empty date range the current month in the export form
+2. Use the same default in the scheduled export
+3. Test both with an empty range
+
+What Claude said last:
+The export button does nothing when the range is empty. I would default it to the current month in both places. Shall I go ahead?</pre>
+          <div class="da"><span class="mbtn gh">Open</span><span class="mbtn">Show less</span><span class="mbtn gh">Copy</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="muted small note-ex">Illustration with example data. Show all opens everything behind a row: the whole command, file or plan, and all of what Claude said.</p>
     <details class="more">
       <summary>More about the Board: lanes, folders, automatic moves, mail</summary>
       <div class="features">
