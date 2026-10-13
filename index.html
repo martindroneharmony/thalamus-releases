@@ -575,7 +575,7 @@ footer .cta{justify-content:center}
     <div class="features">
       <div class="card"><h3>Capture anything</h3><p>A new item takes a sentence, files, a pasted screenshot or a long paste. A long capture becomes a card with a short topic name; the whole text stays inside the item. Attachments stay with the item in its project folder, out of git.</p></div>
       <div class="card"><h3>Kinds and tags</h3><p>Each item is a Bug, a Feature request, a Decision, Research or a Chore, with tags such as Slides, Testing or Publish. Thalamus sets them as it files, learns from your corrections, and never changes the ones you chose.</p></div>
-      <div class="card"><h3>From any session</h3><p>Claude sessions put an item on the Board with <code>thalamus add</code>, with its tags and due date, keep it current with <code>thalamus edit</code>, and hand finished work over to Review. With <code>thalamus list</code> and <code>thalamus show</code> they first see what is already there, so nothing lands twice. Go, Done and every other move stay yours: the command refuses them.</p></div>
+      <div class="card"><h3>From any session</h3><p>Claude sessions put an item on the Board with <code>thalamus add</code>, with its tags and due date, keep it current with <code>thalamus edit</code>, and hand finished work over to Review. A long hand-over is stored whole or refused, never cut, and the command says how much it stored. With <code>thalamus list</code> and <code>thalamus show</code> they first see what is already there, so nothing lands twice. Go, Done and every other move stay yours: the command refuses them.</p></div>
     </div>
     <h3 class="fgroup">Shape</h3>
     <div class="features">
@@ -630,7 +630,7 @@ The export button does nothing when the range is empty. I would default it to th
         <div class="card"><h3>Mail only with your OK</h3><p>A session that wants to read a mail asks first, with its reason. You see sender, date and subject and grant that thread, one search, or the mailbox. The grant is read-only, for that session, for at most an hour.</p></div>
       </div>
     </details>
-    <div class="mock" role="img" style="margin-top:22px" aria-label="Illustration of the thalamus command in a Claude session with example data: the session lists the project's items without a due date and finds one; then it adds an item with a hard due date and a tag and gets its id; later it changes the item's detail and hands it over to Review; a try to mark it done is refused, because that move is yours alone.">
+    <div class="mock" role="img" style="margin-top:22px" aria-label="Illustration of the thalamus command in a Claude session with example data: the session lists the project's items without a due date and finds one; then it adds an item with a hard due date and a tag and gets its id; later it changes the item's detail and hands it over to Review, and the command says how many characters of the detail it stored; a try to mark it done is refused, because that move is yours alone.">
       <div class="bar"><img src="icon.png" alt=""><span class="muted" style="font-size:11.5px">A Claude session, in any project</span></div>
       <div class="grp cmd"><pre><span class="m">&gt;</span> thalamus list --project work/website --no-due
 <span class="g">i:9b3e61c2a70d584f  work/website  Doing  bug  Footer overlaps the banner  no due date  no tags</span>
@@ -638,7 +638,8 @@ The export button does nothing when the range is empty. I would default it to th
 <span class="g">i:4f2a9c07d1e85b36</span>
 <span class="m">&gt;</span> thalamus edit i:4f2a9c07d1e85b36 --detail "Renewed on 28 November; valid for a year." --review
 <span class="g">i:4f2a9c07d1e85b36
-changed: detail, stage (now Review)</span>
+changed: detail, stage (now Review)
+detail: 41 characters stored</span>
 <span class="m">&gt;</span> thalamus edit i:4f2a9c07d1e85b36 --done
 <span class="y">Stage moves (Go, Start, Done, Park, Drop), approvals and deleting an item are yours alone: the command cannot make them.</span></pre></div>
     </div>
