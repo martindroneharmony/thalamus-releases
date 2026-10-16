@@ -117,16 +117,6 @@ p.lead{font-size:19px;color:var(--dim);max-width:680px;margin:0 0 28px}
 .mlbl{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
 .mhead{display:flex;align-items:center;gap:8px;padding:9px 14px 0;flex-wrap:wrap}
 .mhead .sp{flex:1}
-/* Next up */
-.ncols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding:6px 14px 2px}
-.ncol{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:6px 9px;min-width:0}
-.ncol .nt{display:flex;align-items:center;gap:6px;margin-bottom:2px}
-.nrow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0 8px;align-items:center;padding:5px 0;border-top:1px solid var(--line)}
-.nrow:first-of-type{border-top:0}
-.nrow .tk{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.nrow .why{grid-column:1;font-size:11px;color:var(--dim);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.nrow .na{grid-column:2;grid-row:1 / span 2;display:flex;gap:4px}
-.nrow .na .mbtn{padding:1px 8px;font-size:11px}
 .today{margin:8px 14px 4px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 12px}
 .today .th{display:flex;align-items:center;gap:8px}
 .today ol{list-style:none;margin:6px 0 4px;padding:0}
@@ -326,7 +316,6 @@ footer .cta{justify-content:center}
   .lane .lh{display:block}
 }
 @media (max-width:760px){
-  .ncols{grid-template-columns:1fr}
   .groups{grid-template-columns:1fr}
   .grp+.grp{border-left:0;border-top:1px solid var(--line)}
   .usage,.mock .gear{display:none}
@@ -384,7 +373,7 @@ footer .cta{justify-content:center}
     <div class="mock" role="img" aria-label="Illustration of the Thalamus cockpit with example data: five Claude sessions grouped by Work, Private and General, each with its state, and the tabs Approvals, Decisions and Questions with their counts.">
       <div class="bar">
         <img src="icon.png" alt=""><b>Thalamus</b>
-        <div class="tabs"><span class="on">Cockpit<span class="cnt">2</span></span><span>Board<span class="cnt n">4</span></span><span class="opt">Usage</span><span class="vsep"></span><span>Approvals<span class="cnt">1</span></span><span>Decisions<span class="cnt">1</span></span><span>Questions<span class="cnt n">2</span></span></div>
+        <div class="tabs"><span class="on">Cockpit<span class="cnt">2</span></span><span>Board</span><span class="opt">Usage</span><span class="vsep"></span><span>Approvals<span class="cnt">1</span></span><span>Decisions<span class="cnt">1</span></span><span>Questions<span class="cnt n">2</span></span><span>Review<span class="cnt n">1</span></span></div>
         <div class="usage"><span><span class="batt"><i class="mid" style="height:8px"></i></span><b>58%</b></span><span><span class="batt"><i style="height:11px"></i></span><b>81%</b></span></div>
         <span class="mbtn opt">Focus</span><span class="gear">⚙</span>
       </div>
@@ -431,7 +420,7 @@ footer .cta{justify-content:center}
     <div class="mock" role="img" aria-label="Illustration of the Thalamus cockpit with example data: five sessions grouped by Work, Private and General, each with its state, the Approvals, Decisions and Questions tabs with their counts, and two groups of terminals below, one with a Copy link menu on a link.">
       <div class="bar">
         <img src="icon.png" alt=""><b>Thalamus</b>
-        <div class="tabs"><span class="on">Cockpit<span class="cnt">2</span></span><span>Board<span class="cnt n">4</span></span><span class="opt">Usage</span><span class="vsep"></span><span>Approvals<span class="cnt">1</span></span><span>Decisions<span class="cnt">1</span></span><span>Questions<span class="cnt n">2</span></span></div>
+        <div class="tabs"><span class="on">Cockpit<span class="cnt">2</span></span><span>Board</span><span class="opt">Usage</span><span class="vsep"></span><span>Approvals<span class="cnt">1</span></span><span>Decisions<span class="cnt">1</span></span><span>Questions<span class="cnt n">2</span></span><span>Review<span class="cnt n">1</span></span></div>
         <div class="usage"><span><span class="batt"><i class="mid" style="height:8px"></i></span><b>58%</b></span><span><span class="batt"><i style="height:11px"></i></span><b>81%</b></span></div>
         <span class="mbtn opt">Focus</span><span class="gear">⚙</span>
       </div>
@@ -498,15 +487,15 @@ footer .cta{justify-content:center}
     <h2>From idea to done, in plain sight.</h2>
     <p class="lead">Every idea, bug and task moves through six stages: Seed, Shaping, Ready, Doing, Review, Done. Two moves are always yours: the Go that turns a shaped idea into work, and the Done that closes it. Each project has its own lane; lanes with work under way sit on top.</p>
     <div class="mock" role="img" aria-label="Illustration of the Board with example data: six stages from Seed to Done as columns and one lane per project across them, two lanes open with their cards and one folded to its name and count.">
-      <div class="bar"><img src="icon.png" alt=""><b>Thalamus</b><div class="tabs"><span>Cockpit</span><span class="on">Board<span class="cnt n">4</span></span><span class="opt">Usage</span><span class="vsep"></span><span>Approvals<span class="cnt">1</span></span><span>Decisions<span class="cnt">1</span></span><span>Questions<span class="cnt n">2</span></span></div></div>
+      <div class="bar"><img src="icon.png" alt=""><b>Thalamus</b><div class="tabs"><span>Cockpit</span><span class="on">Board</span><span class="opt">Usage</span><span class="vsep"></span><span>Approvals<span class="cnt">1</span></span><span>Decisions<span class="cnt">1</span></span><span>Questions<span class="cnt n">2</span></span><span>Review<span class="cnt n">1</span></span></div></div>
       <div class="bltool">
         <span class="seg"><span class="on">Work</span><span class="on">Private</span><span>General</span></span>
         <span class="fin">All projects ▾</span><span class="fin">Search items</span>
-        <span class="muted" style="font-size:11.5px">☐ Parked and dropped</span><span class="muted" style="font-size:11.5px">☑ Done</span><span class="muted" style="font-size:11.5px">☑ Show Doing</span><span style="flex:1"></span><span class="mbtn">Questions (2)</span><span class="mbtn gh">Refresh</span>
+        <span class="muted" style="font-size:11.5px">☐ Parked and dropped</span><span class="muted" style="font-size:11.5px">☑ Done</span><span class="muted" style="font-size:11.5px">☑ Show Doing</span><span style="flex:1"></span><span class="mbtn gh">Weekly review</span><span class="mbtn gh">Refresh</span>
         <span class="muted" style="font-size:11.5px">Doing 1 of 3 · Waiting for you 3 of 7</span>
       </div>
       <div class="fold"><span class="fin" style="min-width:260px">An idea, a bug, a request …</span> <span class="muted">Kind</span> <span class="fin" style="min-width:90px">Thalamus decides ▾</span> <span class="muted">Project</span> <span class="fin" style="min-width:110px">Thalamus files it ▾</span> <span class="mbtn">Attach…</span> <span class="mbtn pri">Add</span></div>
-      <div style="display:flex;flex-wrap:wrap;gap:0 8px;margin:0 12px"><div class="fold" style="flex:1 1 170px;margin:10px 0 0"><b>For you</b>4 <span class="muted">what waits for your decision</span></div><div class="fold" style="flex:1 1 170px;margin:10px 0 0"><b>Waiting for a project</b>1</div><div class="fold" style="flex:1 1 170px;margin:10px 0 0"><b>Ideas</b>3 <span class="muted">from AI Daydream</span></div></div>
+      <div style="display:flex;flex-wrap:wrap;gap:0 8px;margin:0 12px"><div class="fold" style="flex:1 1 170px;margin:10px 0 0"><b>Waiting for a project</b>1</div><div class="fold" style="flex:1 1 170px;margin:10px 0 0"><b>Ideas</b>3 <span class="muted">from AI Daydream</span></div></div>
       <div class="swl">
         <div class="lanes lhd"><span>Seed <i>3</i></span><span>Shaping <i>3</i></span><span>Ready <i>1</i></span><span>Doing <i>1</i></span><span>Review <i>1</i></span><span>Done <i>3</i></span></div>
         <div class="swh"><span class="chev">▾</span><span class="dot c-work"></span>work/billing-api<span class="n">4</span><span class="swd">Doing 1</span></div>
@@ -532,26 +521,22 @@ footer .cta{justify-content:center}
     </div>
     <p class="muted small note-ex">Illustration with example data.</p>
     <div id="next" class="sub">
-    <h3 class="subh">On top of the Board: what needs you</h3>
-    <p class="lead">Thalamus does not just show what runs. It keeps what needs you in one list, suggests what to do next and puts every stray idea where it belongs.</p>
-    <div class="mock" role="img" aria-label="Illustration of the top of the Board with example data: the Weekly review button marked due, and For you, the one list of what waits for your decision: an approval, questions to answer, a Go and a Review." style="margin:22px 0 26px">
-      <div class="bar"><img src="icon.png" alt=""><div class="tabs"><span>Cockpit</span><span class="on">Board<span class="cnt n">4</span></span><span class="opt">Usage</span><span class="vsep"></span><span>Approvals<span class="cnt">1</span></span><span>Decisions<span class="cnt">1</span></span><span>Questions<span class="cnt n">2</span></span></div></div>
-      <div class="bltool">
-        <span class="seg"><span class="on">Work</span><span class="on">Private</span><span>General</span></span>
-        <span class="mbtn">Questions (2)</span><span class="mbtn pri">Weekly review · due</span>
-      </div>
-      <div class="fold"><b>New</b><span class="fin" style="min-width:220px">What is it about …</span> <span class="muted">Kind</span> <span class="fin" style="min-width:90px">Thalamus decides ▾</span> <span class="muted">Project</span> <span class="fin" style="min-width:110px">Thalamus files it ▾</span> <span class="mbtn">Attach…</span> <span class="mbtn pri">Add</span></div>
-      <div class="fold"><b>For you</b>4 <span class="muted">what waits for your decision</span>
-        <div class="tl" style="display:flex;flex-direction:column;gap:3px;margin-top:6px"><u>✋ Approve: run latexmk -pdf (general/thesis)</u><u>? Answer 2 questions · Newsletter for the web shop (work/website)</u><u>→ Go · Which payment provider (work/billing-api)</u><u>✓ Review · Dark mode for the docs (work/website)</u></div></div>
-      <div class="fold" style="margin-bottom:12px"><b>Ideas</b>3 <span class="muted">from AI Daydream</span></div>
+    <h3 class="subh">What needs you lights up at the top</h3>
+    <p class="lead">Thalamus does not just show what runs. What needs you sits in the tabs at the top, each with its count, and the Board stays the overview of the work.</p>
+    <div class="mock" role="img" aria-label="Illustration of the Review tab with example data: two finished items waiting for your check, one with its review packet of 4 of 5 done-when points met and two hand tests, each with Open item; Done stays in the item." style="margin:22px 0 26px">
+      <div class="bar"><img src="icon.png" alt=""><div class="tabs"><span>Cockpit</span><span>Board</span><span class="opt">Usage</span><span class="vsep"></span><span>Approvals<span class="cnt">1</span></span><span>Decisions<span class="cnt">1</span></span><span>Questions<span class="cnt n">2</span></span><span class="on">Review<span class="cnt n">2</span></span></div></div>
+      <div class="mhead"><b>Review</b><span class="muted" style="font-size:11.5px">2 waiting · oldest first</span></div>
+      <div class="fold"><b>work/website</b> <span class="muted">Dark mode for the docs · 1 d</span>
+        <div class="tl" style="display:flex;align-items:center;gap:8px;margin-top:6px"><span class="muted">Review packet: 4 of 5 done-when points met · 2 hand tests</span><span style="flex:1"></span><span class="mbtn pri">Open item</span></div></div>
+      <div class="fold" style="margin-bottom:12px"><b>private/garden</b> <span class="muted">Watering timer · 2 h</span>
+        <div class="tl" style="display:flex;align-items:center;gap:8px;margin-top:6px"><span class="muted">Review packet: 3 of 3 done-when points met</span><span style="flex:1"></span><span class="mbtn pri">Open item</span></div></div>
     </div>
     <div class="two top">
       <div>
-        <h3>For you, then Next up</h3>
-        <p class="muted">The Board is the overview: what waits for your decision sits in one list on top, For you, and the Board tab counts it. Next up runs in the background: every 30 minutes Claude looks at the sessions waiting for you, your captures and the Board, and ranks what to do next for Work, Private and General.</p>
+        <h3>The lit tabs</h3>
+        <p class="muted">One place for each kind of thing that waits, never two: a tab shows up with its count when something waits and is gone when nothing does.</p>
         <ul class="list">
-          <li><span><b>For you, in order.</b> Approvals, questions to answer, a Go on a shaped item, finished work to check, stopped steps, captures to file and new ideas.</span></li>
-          <li><span><b>Next up, ranked for you.</b> The ranking comes with Go and Skip; what you start and what you skip shapes the next ranking.</span></li>
+          <li><span><b>Approvals, Decisions, Questions, Review.</b> Permission prompts and mail access in Approvals; Claude's choices in Decisions; questions from sessions and shaping, failing plans, briefs ready for your Go, stopped steps, captures to file and new ideas in Questions; finished work to check in Review, with its proof. Done stays your move in the item.</span></li>
           <li><span><b>A weekly review.</b> On Monday a short guided review from the Board: what waits, this week's bets and a retro that goes into Engram.</span></li>
           <li><span><b>Focus when you need it.</b> A focus block holds every ping except approvals and tells you afterwards what came up.</span></li>
         </ul>
@@ -593,10 +578,10 @@ footer .cta{justify-content:center}
     <div class="features">
       <div class="card"><h3>Proof</h3><p>A finished session hands over its proof: each done-when point with evidence, what it could not verify, and what to try yourself. Open the item in Review and its outcome sits on top; your Done moves it at once.</p></div>
       <div class="card"><h3>Review, then publish</h3><p>Finished work arrives with its hand tests as a checklist. Slides, documents and designs get a second look against done-when before you see them. Publish runs only after your OK, and from your phone only after Face ID or your fingerprint.</p></div>
-      <div class="card"><h3>Approvals, Decisions and Questions</h3><p>Three tabs gather what waits for you: every permission prompt the moment it is raised, with its command and risk; every choice Claude offers, its option questions and plan approvals; and every open question from sessions, shaping and plans. Answer right there, and Show all gives the whole command, file or plan behind a row. The tabs vanish when nothing waits.</p></div>
+      <div class="card"><h3>Approvals, Decisions, Questions, Review</h3><p>Four tabs gather what waits for you: every permission prompt the moment it is raised, with its command and risk; every choice Claude offers, its option questions and plan approvals; every open question from sessions, shaping and plans, and what waits on the Board; and finished work to check. Answer right there, and Show all gives the whole command, file or plan behind a row. The tabs vanish when nothing waits.</p></div>
     </div>
     <div class="mock" id="decisions-tab" role="img" style="margin-top:22px;scroll-margin-top:80px" aria-label="Illustration of the Decisions tab with example data: Claude asks which watering schedule a timer should start with, with two options and a Send button; below it a plan approval shows a three-step plan, opened with Show all so that the whole plan and what Claude said can be read and copied.">
-      <div class="bar"><img src="icon.png" alt=""><b>Thalamus</b><div class="tabs"><span>Cockpit</span><span>Board<span class="cnt n">4</span></span><span class="opt">Usage</span><span class="vsep"></span><span>Approvals<span class="cnt">1</span></span><span class="on">Decisions<span class="cnt">2</span></span><span>Questions<span class="cnt n">2</span></span></div></div>
+      <div class="bar"><img src="icon.png" alt=""><b>Thalamus</b><div class="tabs"><span>Cockpit</span><span>Board</span><span class="opt">Usage</span><span class="vsep"></span><span>Approvals<span class="cnt">1</span></span><span class="on">Decisions<span class="cnt">2</span></span><span>Questions<span class="cnt n">2</span></span><span>Review<span class="cnt n">1</span></span></div></div>
       <div class="mhead"><b>Decisions</b><span class="muted" style="font-size:11.5px">2 open · oldest first</span></div>
       <div class="drows">
         <div class="drow sel">
@@ -626,7 +611,7 @@ The export button does nothing when the range is empty. I would default it to th
       <div class="features">
         <div class="card"><h3>Lanes</h3><p>Lanes start folded to their name and count and stay as you leave them; Show Doing opens every lane with work under way. Drag a card into another lane and it moves to that project, folder included. Done stays off the Board until you tick it. On a laptop nothing scrolls sideways.</p></div>
         <div class="card"><h3>Projects are folders</h3><p>Start an item and it goes to the Claude session in that project's folder, with that project's instructions and memory. No session there yet? One opens. Any folder under your projects folder works, at any depth; there is no project list to maintain: the Project list of a new item is the folder tree itself, and each lane on the Board carries its folder's name.</p></div>
-        <div class="card"><h3>The Board keeps itself</h3><p>When a session clearly works on a Ready item, it moves to Doing, and to Review when it is finished. A card in Doing shows what its session is doing right now, with the same signs as the Cockpit. Done stays your call.</p></div>
+        <div class="card"><h3>The Board keeps itself</h3><p>Start moves an item to Doing, and the review packet its session hands over moves it to Review. A card in Doing shows what its session is doing right now, with the same signs as the Cockpit. Done stays your call.</p></div>
         <div class="card"><h3>Mail only with your OK</h3><p>A session that wants to read a mail asks first, with its reason. You see sender, date and subject and grant that thread, one search, or the mailbox. The grant is read-only, for that session, for at most an hour.</p></div>
       </div>
     </details>
@@ -711,7 +696,7 @@ detail: 41 characters stored</span>
     <div class="flow">
       <div class="box"><h3>Claude Code sessions</h3><p>In any terminal. Hooks report start, prompts, tool use, waiting and end. The status line reports limits, model and context fill.</p></div>
       <div class="arrow">→ 127.0.0.1 →</div>
-      <div class="box hub"><h3>Thalamus</h3><p>Tray app with the cockpit of sessions, the Board (New, For you, Daydream ideas, the items), usage, Next up in the background, the terminals and the optional phone page. Fetches signed updates and installs them when you say so.</p></div>
+      <div class="box hub"><h3>Thalamus</h3><p>Tray app with the cockpit of sessions, the Board (New, Daydream ideas, the items), the tabs of what waits for you, usage, the terminals and the optional phone page. Fetches signed updates and installs them when you say so.</p></div>
       <div class="arrow">⇄ pipe ⇄</div>
       <div class="box"><h3>Shell host</h3><p>A background process that owns your terminals, so they outlive the window and every update.</p></div>
     </div>
