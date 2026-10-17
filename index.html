@@ -21,7 +21,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>
 :root{--bg:#090c10;--bg2:#0d1217;--panel:#121820;--panel2:#18202b;--line:#232c38;--text:#e6eef0;--dim:#97a6b1;--muted:#7a8894;
-  --teal:#5ff3e8;--teal2:#2bb8ad;--amber:#f2a541;--work:#3987e5;--private:#c062b8;--general:#199e70;
+  --teal:#5ff3e8;--teal2:#2bb8ad;--amber:#f2a541;--work:#3987e5;--private:#c062b8;--general:#199e70;--chess:#d4a017;
   --mono:Consolas,"Cascadia Mono","JetBrains Mono",ui-monospace,monospace}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -133,7 +133,7 @@ p.lead{font-size:19px;color:var(--dim);max-width:680px;margin:0 0 28px}
 .rows{padding:6px 14px 10px}
 .cat{display:flex;align-items:center;gap:8px;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin:8px 0 2px}
 .dot{width:8px;height:8px;border-radius:50%;display:inline-block;flex:none}
-.c-work{background:var(--work)}.c-private{background:var(--private)}.c-general{background:var(--general)}
+.c-work{background:var(--work)}.c-private{background:var(--private)}.c-general{background:var(--general)}.c-chess{background:var(--chess)}
 .row{display:grid;grid-template-columns:16px 120px minmax(0,1fr) auto;gap:10px;align-items:center;padding:4px 6px;border-radius:6px}
 .row.sel{background:var(--hover)}
 .row .nm{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -489,7 +489,7 @@ footer .cta{justify-content:center}
     <div class="mock" role="img" aria-label="Illustration of the Board with example data: six stages from Seed to Done as columns and one lane per project across them, two lanes open with their cards and one folded to its name and count.">
       <div class="bar"><img src="icon.png" alt=""><b>Thalamus</b><div class="tabs"><span>Cockpit</span><span class="on">Board</span><span class="opt">Usage</span><span class="vsep"></span><span>Approvals<span class="cnt">1</span></span><span>Decisions<span class="cnt">1</span></span><span>Questions<span class="cnt n">2</span></span><span>Review<span class="cnt n">1</span></span></div></div>
       <div class="bltool">
-        <span class="seg"><span class="on">Work</span><span class="on">Private</span><span>General</span></span>
+        <span class="seg"><span class="on">Work</span><span class="on">Private</span><span>General</span><span>Chess</span></span>
         <span class="fin">All projects ▾</span><span class="fin">Search items</span>
         <span class="muted" style="font-size:11.5px">☐ Parked and dropped</span><span class="muted" style="font-size:11.5px">☑ Done</span><span class="muted" style="font-size:11.5px">☑ Show Doing</span><span style="flex:1"></span><span class="mbtn gh">Weekly review</span><span class="mbtn gh">Refresh</span>
         <span class="muted" style="font-size:11.5px">Doing 1 of 3 · Waiting for you 3 of 7</span>
@@ -611,7 +611,7 @@ The export button does nothing when the range is empty. I would default it to th
       <summary>More about the Board: lanes, folders, automatic moves, mail</summary>
       <div class="features">
         <div class="card"><h3>Lanes</h3><p>Lanes start folded to their name and count and stay as you leave them; Show Doing opens every lane with work under way. Drag a card into another lane and it moves to that project, folder included. Done stays off the Board until you tick it. Done and Drop sit on the cards themselves, two clicks each. On a laptop nothing scrolls sideways.</p></div>
-        <div class="card"><h3>Projects are folders</h3><p>Start an item and it goes to the Claude session in that project's folder, with that project's instructions and memory. No session there yet? One opens. Any folder under your projects folder works, at any depth; there is no project list to maintain: the Project list of a new item is the folder tree itself, the projects you used in the last two weeks first and the rest one search away under Browse. A project carries its folder's name everywhere, on the Board, in the tabs and on the phone, and an item always runs in its project's folder or a folder inside it.</p></div>
+        <div class="card"><h3>Projects are folders</h3><p>Start an item and it goes to the Claude session in that project's folder, with that project's instructions and memory. No session there yet? One opens. Any folder under your projects folder works, at any depth; there is no project list to maintain: the Project list of a new item is the folder tree itself, the projects you used in the last two weeks first and the rest one search away under Browse. A project carries its folder's name everywhere, on the Board, in the tabs and on the phone, and an item always runs in its project's folder or a folder inside it. Four sections hold the folders: Work, Private, General and Chess, each with its own colour, switch on the Board and notification setting.</p></div>
         <div class="card"><h3>The Board keeps itself</h3><p>Start moves an item to Doing, and the review packet its session hands over moves it to Review. A card in Doing shows what its session is doing right now, with the same signs as the Cockpit. Done stays your call.</p></div>
         <div class="card"><h3>Mail only with your OK</h3><p>A session that wants to read a mail asks first, with its reason. You see sender, date and subject and grant that thread, one search, or the mailbox. The grant is read-only, for that session, for at most an hour.</p></div>
       </div>
